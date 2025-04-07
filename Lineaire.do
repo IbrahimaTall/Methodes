@@ -2,14 +2,10 @@
 * La compréhension de ce modèle est essentiel en termes de fonctionnement et de conditions de validité.
 * Ce tutoriel permet de mettre en pratique le modèle linéaire multiple sur tous ses aspects
 * En appliquant les tests paramétriques, les contraintes et la prévision.
-sysuse auto.dta, clear
-* Le modèle
-regress price mpg weight foreign
-estimates store model
-*############## 1. Valeurs inhabituelles ##############################################################
 use "C:\Users\IBRAHIMA TALL\Documents\COURS\Regression\effectdata.dta"
 regress PROD SEM REV AGE MAT CRED
 estimates store mymodel
+*############## 1. Valeurs inhabituelles ##############################################################
 graph matrix PROD SEM REV AGE
 scatter PROD SEM, scheme(white_tableau)
 set scheme white_tableau
