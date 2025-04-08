@@ -11,12 +11,12 @@ scatter PROD SEM, scheme(white_tableau)
 set scheme white_tableau
 scatter PROD REV
 scatter PROD AGE, mlabel(ID)
-predict prod_r, rstudent
-stem prod_r
+predict prod_rstd, rstudent
+stem prod_rstd
 search hilo
-sort prod_r
-summarize prod_r
-hilo prod_r ID if abs(prod_r) >= 2
+sort prod_rstd
+summarize prod_rstd
+hilo prod_rstd ID if abs(prod_rstd) >= 2
 predict prod_lev, leverage
 stem prod_lev
 hilo prod_lev ID, show(5) high
@@ -37,3 +37,14 @@ list ID PROD SEM REV AGE if abs(df_1) >= 2/sqrt(_N)
 avplot SEM, mlabel(ID)
 avplots, mlabel(ID)
 *############## 2 Checking Normality of Residuals #####################################################
+predict prod_r, residual
+kdensity prod_r, normal
+* standardized normal probability (P-P) plot (sensitive to non normality to the middle range of data)
+pnorm prod_r
+* quantiles of a variable against the quantiles of a normal (sensitive near the tails)
+qnorm prod_r
+search iqr
+iqr prod_r
+* Shapiro-Wilk W test for normality
+swilk prod_r
+*############## 3 Checking Homoscedasticity of Residuals ##############################################
