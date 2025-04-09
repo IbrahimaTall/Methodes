@@ -48,3 +48,20 @@ iqr prod_r
 * Shapiro-Wilk W test for normality
 swilk prod_r
 *############## 3 Checking Homoscedasticity of Residuals ##############################################
+* residuals versus fitted (predicted) values
+rvfplot, yline(0)
+* IM test
+estat imtest
+* Breush-pegan test
+estat hettest
+*############## 4 Checking for Multicollinearity ######################################################
+* vif (variance inflation factor) for multicollinearity: VIF and tolerance (1/VIF)
+vif
+search collin 
+collin SEM REV AGE MAT CRED
+*############# 5 Checking Linearity ##################################################################
+twoway (scatter PROD SEM) (lfit PROD SEM) (lowess PROD SEM)
+foreach v of varlist SEM REV AGE MAT CRED {
+  acprplot `v', lowess lsopts(bwidth(1))
+}
+*############## 6 Model Specification #################################################################
