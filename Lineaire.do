@@ -54,14 +54,20 @@ rvfplot, yline(0)
 estat imtest
 * Breush-pegan test
 estat hettest
-*############## 4 Checking for Multicollinearity ######################################################
+*############## 4 Checking for Multicollinearity #######################################################
 * vif (variance inflation factor) for multicollinearity: VIF and tolerance (1/VIF)
 vif
 search collin 
 collin SEM REV AGE MAT CRED
-*############# 5 Checking Linearity ##################################################################
+*############# 5 Checking Linearity ####################################################################
 twoway (scatter PROD SEM) (lfit PROD SEM) (lowess PROD SEM)
 foreach v of varlist SEM REV AGE MAT CRED {
   acprplot `v', lowess lsopts(bwidth(1))
 }
-*############## 6 Model Specification #################################################################
+*############## 6 Model Specification ###################################################################
+* _hat doit être significative et non pas _hatsq
+linktest
+* mitted variables test
+ovtest
+*############# 7 Issues of Independence #################################################################
+* dwstat test de correlation pour serie temporelle.
