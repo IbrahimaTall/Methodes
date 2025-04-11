@@ -71,3 +71,21 @@ linktest
 ovtest
 *############# 7 Issues of Independence #################################################################
 * dwstat test de correlation pour serie temporelle.
+*############# 8 Les catégorielles ######################################################################
+* La comparaison par rapport à la modalité de base
+regress PROD SEM REV AGE MAT CRED i.SITMAT
+regress PROD SEM REV AGE MAT CRED ib(2).SITMAT
+regress PROD SEM REV AGE MAT CRED ib(last).SITMAT
+* Backward Difference Coding for prior adjacent level.
+regress PROD SEM REV AGE MAT CRED b.SITMAT
+* Helmert Coding for comparing with the sum for the reste
+regress PROD SEM REV AGE MAT CRED h.SITMAT
+* Reverse Helmert Coding for comparing with the sum for the previous
+regress PROD SEM REV AGE MAT CRED r.SITMAT
+* Deviation Coding compare for the all levels of the variable
+regress PROD SEM REV AGE MAT CRED e.SITMAT
+*Orthogonal Polynomial Coding for ordinal variable
+regress PROD SEM REV AGE MAT CRED o.SITMAT
+*User Defined Coding
+char race[user] (1 0 -1 0  -.5 1 0 -.5  .5 .5 -.5 -.5)
+regress PROD SEM REV AGE MAT CRED u.SITMAT
