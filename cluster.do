@@ -19,3 +19,8 @@ cluster notes drop in 2
 cluster generate group = groups(3/5), name(kmeancl)
 cluster dendrogram kmeancl if group1 == 3, cutnumber(4) showcount vertical
 *-------------------- Les utilités sur les clusters ---------------------------------------------------------------------------------------
+cluster dir // La liste des classes existente
+cluster list kmeancl, notes type method // Le détail 
+cluster rename kmeancl clkmean
+cluster use clkmean
+cluster drop kmediancl
