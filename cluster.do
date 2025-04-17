@@ -14,7 +14,7 @@ luster kmedians PROD SEM REV TYPSEM SITMAT, k(5) name(kmediancl) start(krandom(3
 luster simplelinkage PROD SEM REV TYPSEM SITMAT, name(simplelink) measure(L2)
 *--------------------- Assamblage moyen ------------------------------------------------------------------------------------
 luster averagelinkage PROD SEM REV TYPSEM SITMAT, name(averagelink) measure(L2)
-*--------------------- Assamblage moyen ------------------------------------------------------------------------------------
+*--------------------- Assamblage complet ------------------------------------------------------------------------------------
 luster completelinkage PROD SEM REV TYPSEM SITMAT, name(completelink) measure(L2)
 *--------------------- Assamblage pondéré ------------------------------------------------------------------------------------
 luster waveragelinkage PROD SEM REV TYPSEM SITMAT, name(waveragelink) measure(L2)
