@@ -22,7 +22,7 @@ luster waveragelinkage PROD SEM REV TYPSEM SITMAT, name(waveragelink) measure(L2
 luster medianlinkage PROD SEM REV TYPSEM SITMAT, name(medianlink) measure(L2)
 *--------------------- Assamblage centré ------------------------------------------------------------------------------------
 luster centroidlinkage PROD SEM REV TYPSEM SITMAT, name(centroidlink) measure(L2)
-*--------------------- Assamblage pondéré ------------------------------------------------------------------------------------
+*--------------------- Assamblage de ward ------------------------------------------------------------------------------------
 luster wardslinkage PROD SEM REV TYPSEM SITMAT, name(wardslink) measure(L2)
 *#################### 3. Opérations sur les classes ######################################################################################
 *-------------------- Les groupes ou classes ----------------------------------------------------------------------------------------------
