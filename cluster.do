@@ -19,11 +19,11 @@ luster completelinkage PROD SEM REV TYPSEM SITMAT, name(completelink) measure(L2
 *--------------------- Assamblage pondéré ------------------------------------------------------------------------------------
 luster waveragelinkage PROD SEM REV TYPSEM SITMAT, name(waveragelink) measure(L2)
 *--------------------- Assamblage médian ------------------------------------------------------------------------------------
-luster medianlinkage PROD SEM REV TYPSEM SITMAT, name(medianlink) measure(L2)
+luster medianlinkage PROD SEM REV TYPSEM SITMAT, name(medianlink) measure(L2squared)
 *--------------------- Assamblage centré ------------------------------------------------------------------------------------
-luster centroidlinkage PROD SEM REV TYPSEM SITMAT, name(centroidlink) measure(L2)
+luster centroidlinkage PROD SEM REV TYPSEM SITMAT, name(centroidlink) measure(L2squared)
 *--------------------- Assamblage de ward ------------------------------------------------------------------------------------
-luster wardslinkage PROD SEM REV TYPSEM SITMAT, name(wardslink) measure(L2)
+luster wardslinkage PROD SEM REV TYPSEM SITMAT, name(wardslink) measure(L2squared)
 *#################### 3. Opérations sur les classes ######################################################################################
 *-------------------- Les groupes ou classes ----------------------------------------------------------------------------------------------
 cluster generate group = groups(3/5), name(kmeancl)
