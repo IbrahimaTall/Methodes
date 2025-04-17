@@ -18,7 +18,7 @@ luster averagelinkage PROD SEM REV TYPSEM SITMAT, name(averagelink) measure(L2)
 luster completelinkage PROD SEM REV TYPSEM SITMAT, name(completelink) measure(L2)
 *--------------------- Assamblage pondéré ------------------------------------------------------------------------------------
 luster waveragelinkage PROD SEM REV TYPSEM SITMAT, name(waveragelink) measure(L2)
-*--------------------- Assamblage pondéré ------------------------------------------------------------------------------------
+*--------------------- Assamblage médian ------------------------------------------------------------------------------------
 luster medianlinkage PROD SEM REV TYPSEM SITMAT, name(medianlink) measure(L2)
 *--------------------- Assamblage pondéré ------------------------------------------------------------------------------------
 luster centroidlinkage PROD SEM REV TYPSEM SITMAT, name(centroidlink) measure(L2)
