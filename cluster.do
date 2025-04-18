@@ -10,22 +10,22 @@ luster kmeans PROD SEM REV TYPSEM SITMAT, k(5) name(kmeancl) start(krandom(38561
 *--------------------- Les médianes centrales (k-medians) ---------------------------------------------------------------------------------
 luster kmedians PROD SEM REV TYPSEM SITMAT, k(5) name(kmediancl) start(krandom(385617)) measure(Gower) keepcenter iterate(10000)
 *#################### 2. Classification hierarchique ######################################################################################
-*--------------------- Assamblage simple ------------------------------------------------------------------------------------
+*--------------------- Assamblage simple --------------------------------------------------------------------------------------------------
 luster simplelinkage PROD SEM REV TYPSEM SITMAT, name(simplelink) measure(L2)
-*--------------------- Assamblage moyen ------------------------------------------------------------------------------------
+*--------------------- Assamblage moyen ---------------------------------------------------------------------------------------------------
 luster averagelinkage PROD SEM REV TYPSEM SITMAT, name(averagelink) measure(L2)
-*--------------------- Assamblage complet ------------------------------------------------------------------------------------
+*--------------------- Assamblage complet -------------------------------------------------------------------------------------------------
 luster completelinkage PROD SEM REV TYPSEM SITMAT, name(completelink) measure(L2)
-*--------------------- Assamblage pondéré ------------------------------------------------------------------------------------
+*--------------------- Assamblage pondéré -------------------------------------------------------------------------------------------------
 luster waveragelinkage PROD SEM REV TYPSEM SITMAT, name(waveragelink) measure(L2)
-*--------------------- Assamblage médian ------------------------------------------------------------------------------------
+*--------------------- Assamblage médian --------------------------------------------------------------------------------------------------
 luster medianlinkage PROD SEM REV TYPSEM SITMAT, name(medianlink) measure(L2squared)
-*--------------------- Assamblage centré ------------------------------------------------------------------------------------
+*--------------------- Assamblage centré --------------------------------------------------------------------------------------------------
 luster centroidlinkage PROD SEM REV TYPSEM SITMAT, name(centroidlink) measure(L2squared)
-*--------------------- Assamblage de ward ------------------------------------------------------------------------------------
+*--------------------- Assamblage de ward ------------------------------------------------------------------------------------------------
 luster wardslinkage PROD SEM REV TYPSEM SITMAT, name(wardslink) measure(L2squared)
 *#################### 3. Opérations sur les classes ######################################################################################
-*-------------------- Les groupes ou classes ----------------------------------------------------------------------------------------------
+*-------------------- Les groupes ou classes ---------------------------------------------------------------------------------------------
 cluster generate group = groups(3/5), name(kmeancl)
 cluster dendrogram kmeancl if group1 == 3, cutnumber(4) showcount vertical
 *#################### 4. Utilités sur les procédures ######################################################################################
