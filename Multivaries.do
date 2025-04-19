@@ -10,7 +10,7 @@ similitude des modalités de ligne et de colonne et la relation
 d'association entre les variables de ligne et de colonne */
 ca, norowpoint nocolpoint plot
 
-*####################  Cluster analysis (classification ailleurs = analyse discriminante) ##################################################
+*####################  Cluster analysis (classification ailleurs = analyse discriminante) #################################################
 use effectdata.dta, clear
 /*-----------------------------------------------------------------------------------------------------------------------------------------
 La classification est une procédure statistique qui permet de regrouper des observations en groupes. 
