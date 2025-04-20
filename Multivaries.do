@@ -1,5 +1,13 @@
-*################### Analyse simple des composantyes ######################################################################################
-* Similarité et associationn entre deux variables catégoriuelles *
+/* Les Méthodes abordées ici sont:
+  1. Analyse des correspondances
+    i.  Correspndance simple
+    ii. Correspondance multiples
+  2. Analyse factorielle (Factor analysis)
+  3. Analyse des composantes principales
+  4. Analyse discriminantes
+*/
+*################### Analyse des composantyes ######################################################################################
+*------------- i. Analyse simple des correspondances: Similarité et associationn entre deux variables catégoriuelles *
 use effectdata.dta, clear
 tabulate SITMAT TYPESEM, freq chi2
 * dimensions(). The maximum number is min(nr − 1; nc − 1)
@@ -9,6 +17,8 @@ screeplot e(Sv) // Valeur singulière
 similitude des modalités de ligne et de colonne et la relation 
 d'association entre les variables de ligne et de colonne */
 ca, norowpoint nocolpoint plot
+*------------- ii. Analyse multiple des correspondances
+
 
 *####################  Cluster analysis (classification ailleurs = analyse discriminante) #################################################
 use effectdata.dta, clear
