@@ -5,6 +5,7 @@
   2. Analyse factorielle (Factor analysis)
   3. Analyse des composantes principales
   4. Analyse discriminantes
+  5. Classification (cluster analysis)
 */
 *################### Analyse des composantyes ######################################################################################
 *------------- i. Analyse simple des correspondances: Similarité et associationn entre deux variables catégoriuelles *
