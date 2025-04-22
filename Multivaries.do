@@ -25,7 +25,9 @@ mca SITMAT TYPSEM EDU, method(((joint) supplementary(FORM CRED) dimensions(2) no
 mcaplot SITMAT TYPSEM, overlay origin normalize(standard) dimensions(2 1)
 mcaprojection SITMAT TYPSEM, normalize(standard) dimensions(2 1)
 estat coordinates SITMAT TYPSEM, normalize(principal) stats
-
+estat subinertia //Méthode Joint seulement
+estat summarize, crossed labels
+screeplot, mean
 *#################### 5. Cluster analysis (classification ailleurs = analyse discriminante) #################################################
 /*-----------------------------------------------------------------------------------------------------------------------------------------
 La classification est une procédure statistique qui permet de regrouper des observations en groupes. 
