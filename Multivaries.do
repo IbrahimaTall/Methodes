@@ -7,9 +7,9 @@
   4. Analyse discriminantes
   5. Classification (cluster analysis)
 */
-*################### Analyse des composantyes ######################################################################################
-*------------- i. Analyse simple des correspondances: Similarité et associationn entre deux variables catégoriuelles *
 use effectdata.dta, clear
+*################### 1. Analyse des composantyes ######################################################################################
+*------------- i. Analyse simple des correspondances: Similarité et associationn entre deux variables catégoriuelles *
 tabulate SITMAT TYPSEM, freq chi2
 * dimensions(). The maximum number is min(nr − 1; nc − 1)
 ca TYPSEM (mycol: SITMAT EDU), compact plot dimensions(2)
@@ -26,16 +26,15 @@ mcaplot SITMAT TYPSEM, overlay origin normalize(standard) dimensions(2 1)
 mcaprojection SITMAT TYPSEM, normalize(standard) dimensions(2 1)
 estat coordinates SITMAT TYPSEM, normalize(principal) stats
 
-*####################  Cluster analysis (classification ailleurs = analyse discriminante) #################################################
-use effectdata.dta, clear
+*#################### 5. Cluster analysis (classification ailleurs = analyse discriminante) #################################################
 /*-----------------------------------------------------------------------------------------------------------------------------------------
 La classification est une procédure statistique qui permet de regrouper des observations en groupes. 
 Elles peut hierarchique ou non suivant la procedure
 -----------------------------------------------------------------------------------------------------------------------------------------*/
-*-------------------- 1. Classification non hierarchique 
+*-------------------- i. Classification non hierarchique 
 cluster kmeans PROD SEM REV TYPSEM SITMAT, k(5) name(kmeancl) start(krandom(385617)) measure(Gower) keepcenter iterate(10000)
 cluster kmedians PROD SEM REV TYPSEM SITMAT, k(5) name(kmediancl) start(krandom(385617)) measure(Gower) keepcenter iterate(10000)
-*--------------------  2. Classification hierarchique 
+*--------------------  ii. Classification hierarchique 
 cluster simplelinkage PROD SEM REV TYPSEM SITMAT, name(simplelink) measure(L2)
 cluster averagelinkage PROD SEM REV TYPSEM SITMAT, name(averagelink) measure(L2)
 cluster completelinkage PROD SEM REV TYPSEM SITMAT, name(completelink) measure(L2)
@@ -43,10 +42,10 @@ cluster waveragelinkage PROD SEM REV TYPSEM SITMAT, name(waveragelink) measure(L
 cluster medianlinkage PROD SEM REV TYPSEM SITMAT, name(medianlink) measure(L2squared)
 cluster centroidlinkage PROD SEM REV TYPSEM SITMAT, name(centroidlink) measure(L2squared)
 cluster wardslinkage PROD SEM REV TYPSEM SITMAT, name(wardslink) measure(L2squared)
-*--------------------  3. Opérations sur les classes 
+*--------------------  iii. Opérations sur les classes 
 cluster generate group = groups(3/5), name(kmeancl)
 cluster dendrogram kmeancl if group1 == 3, cutnumber(4) showcount vertical
-*--------------------  4. Utilités sur les procédures 
+*--------------------  iv. Utilités sur les procédures 
 cluster notes kmeancl : La mesure de Gower prend en compte les variables continues et discretes
 cluster notes kmeancl : Les variables catégorielles n'ont pas besoins du prefixe i.
 cluster notes kmediancl : Les médianes centrales
