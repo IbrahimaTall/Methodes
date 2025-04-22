@@ -18,7 +18,9 @@ similitude des modalités de ligne et de colonne et la relation
 d'association entre les variables de ligne et de colonne */
 ca, norowpoint nocolpoint plot
 *------------- ii. Analyse multiple des correspondances
-
+mca SITMAT TYPESEM EDU, method(burt) supplementary(FORM CRED) dimensions(2) normalize(standard) report(variables) points(SITMAT EDU)
+mca SITMAT TYPESEM EDU, method((indicator) supplementary(FORM CRED) dimensions(2) normalize((principal) report(crossed) points(SITMAT EDU)
+mca SITMAT TYPESEM EDU, method(((joint) supplementary(FORM CRED) dimensions(2) normalize((principal) report(all) points(SITMAT EDU)
 
 *####################  Cluster analysis (classification ailleurs = analyse discriminante) #################################################
 use effectdata.dta, clear
