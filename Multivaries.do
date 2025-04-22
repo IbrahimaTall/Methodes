@@ -9,21 +9,21 @@
 *################### Analyse des composantyes ######################################################################################
 *------------- i. Analyse simple des correspondances: Similarité et associationn entre deux variables catégoriuelles *
 use effectdata.dta, clear
-tabulate SITMAT TYPESEM, freq chi2
+tabulate SITMAT TYPSEM, freq chi2
 * dimensions(). The maximum number is min(nr − 1; nc − 1)
-ca TYPESEM (mycol: SITMAT EDU), compact plot dimensions(2)
+ca TYPSEM (mycol: SITMAT EDU), compact plot dimensions(2)
 screeplot e(Sv) // Valeur singulière
 /* La méthode de normalisation utilisée permet d'interpréter la 
 similitude des modalités de ligne et de colonne et la relation 
 d'association entre les variables de ligne et de colonne */
 ca, norowpoint nocolpoint plot
 *------------- ii. Analyse multiple des correspondances
-mca SITMAT TYPESEM EDU, method(burt) supplementary(FORM CRED) dimensions(2) normalize(standard) report(variables) points(SITMAT EDU)
-mca SITMAT TYPESEM EDU, method((indicator) supplementary(FORM CRED) dimensions(2) normalize((principal) report(crossed) points(SITMAT EDU)
-mca SITMAT TYPESEM EDU, method(((joint) supplementary(FORM CRED) dimensions(2) normalize((principal) report(all) points(SITMAT EDU)
-mcaplot SITMAT TYPESEM, overlay origin normalize(standard) dimensions(2 1)
-mcaprojection SITMAT TYPESEM, normalize(standard) dimensions(2 1)
-estat coordinates SITMAT TYPESEM, normalize(principal) stats
+mca SITMAT TYPSEM EDU, method(burt) supplementary(FORM CRED) dimensions(2) normalize(standard) report(variables) points(SITMAT EDU)
+mca SITMAT TYPSEM EDU, method((indicator) supplementary(FORM CRED) dimensions(2) normalize((principal) report(crossed) points(SITMAT EDU)
+mca SITMAT TYPSEM EDU, method(((joint) supplementary(FORM CRED) dimensions(2) normalize((principal) report(all) points(SITMAT EDU)
+mcaplot SITMAT TYPSEM, overlay origin normalize(standard) dimensions(2 1)
+mcaprojection SITMAT TYPSEM, normalize(standard) dimensions(2 1)
+estat coordinates SITMAT TYPSEM, normalize(principal) stats
 
 *####################  Cluster analysis (classification ailleurs = analyse discriminante) #################################################
 use effectdata.dta, clear
