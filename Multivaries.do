@@ -21,7 +21,8 @@ ca, norowpoint nocolpoint plot
 mca SITMAT TYPESEM EDU, method(burt) supplementary(FORM CRED) dimensions(2) normalize(standard) report(variables) points(SITMAT EDU)
 mca SITMAT TYPESEM EDU, method((indicator) supplementary(FORM CRED) dimensions(2) normalize((principal) report(crossed) points(SITMAT EDU)
 mca SITMAT TYPESEM EDU, method(((joint) supplementary(FORM CRED) dimensions(2) normalize((principal) report(all) points(SITMAT EDU)
-
+mcaplot SITMAT TYPESEM, overlay origin normalize(standard) dimensions(2 1)
+mcaprojection SITMAT TYPESEM, normalize(standard) dimensions(2 1)
 *####################  Cluster analysis (classification ailleurs = analyse discriminante) #################################################
 use effectdata.dta, clear
 /*-----------------------------------------------------------------------------------------------------------------------------------------
