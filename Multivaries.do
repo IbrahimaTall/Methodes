@@ -28,6 +28,8 @@ estat coordinates SITMAT TYPSEM, normalize(principal) stats
 estat subinertia //Méthode Joint seulement
 estat summarize, crossed labels
 screeplot, mean
+*##################### Discriminant analysis ###############################################################################################
+
 *#################### 5. Cluster analysis (classification ailleurs = analyse discriminante) #################################################
 /*-----------------------------------------------------------------------------------------------------------------------------------------
 La classification est une procédure statistique qui permet de regrouper des observations en groupes. 
