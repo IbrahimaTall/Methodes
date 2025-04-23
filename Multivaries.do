@@ -29,7 +29,13 @@ estat subinertia //Méthode Joint seulement
 estat summarize, crossed labels
 screeplot, mean
 *##################### Discriminant analysis ###############################################################################################
+discrim knn PROD SEM REV, group(TYPSEM) k(3) priors(proportional) ties(nearest) measure(absolute)
 
+estat classtable, class priors(proportional) ties(random) title("Discrimination")
+estat errorrate, class priors(proportional) pp(stratified) ties(random) title("Discrimination") //count
+estat grsummarize, n(%9.1f) mean(%9.1f) median(%9.1f) sd(%9.1f) cv(%9.1f) semean(%9.1f) min(%9.1f) max(%9.1) transpose
+estat list, misclassified classification(noclass) probabilities(loopr) varlist(last) id(varname format(%9.1f)) separator(5)
+estat summarize, labels noheader noweights
 *#################### 5. Cluster analysis (classification ailleurs = analyse discriminante) #################################################
 /*-----------------------------------------------------------------------------------------------------------------------------------------
 La classification est une procédure statistique qui permet de regrouper des observations en groupes. 
