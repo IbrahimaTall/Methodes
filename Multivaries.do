@@ -31,7 +31,6 @@ screeplot, mean
 *#################### 2. Analyse factorielle (Factor analysis)
 *#################### 3. Analyse des composantes principales
 *#################### 4. Analyse discriminantes
-*##################### Discriminant analysis ###############################################################################################
 discrim knn PROD SEM REV, group(TYPSEM) k(3) priors(proportional) ties(nearest) measure(absolute)
 estat classtable, class priors(proportional) ties(random) title("Discrimination")
 estat errorrate, class priors(proportional) pp(stratified) ties(random) title("Discrimination") //count
