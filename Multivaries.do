@@ -37,7 +37,7 @@ estat errorrate, class priors(proportional) pp(stratified) ties(random) title("D
 estat grsummarize, n(%9.1f) mean(%9.1f) median(%9.1f) sd(%9.1f) cv(%9.1f) semean(%9.1f) min(%9.1f) max(%9.1) transpose
 estat list, misclassified classification(noclass) probabilities(loopr) varlist(last) id(varname format(%9.1f)) separator(5)
 estat summarize, labels noheader noweights
-*#################### 5. Cluster analysis (classification ailleurs = analyse discriminante) #################################################
+*#################### 5. Cluster analysis (classification ailleurs = analyse discriminante) ###############################################
 /*-----------------------------------------------------------------------------------------------------------------------------------------
 La classification est une procédure statistique qui permet de regrouper des observations en groupes. 
 Elles peut hierarchique ou non suivant la procedure
