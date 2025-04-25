@@ -31,6 +31,7 @@ screeplot, mean
 *#################### 2. Analyse factorielle (Factor analysis)
 *#################### 3. Analyse des composantes principales
 pca PROD SEM REV, components(2) correlation means vce(normal)
+estat anti, nocorr nocov format(%9.1f)
 *#################### 4. Analyse discriminantes
 discrim knn PROD SEM REV, group(TYPSEM) k(3) priors(proportional) ties(nearest) measure(absolute)
 discrim lda PROD SEM REV, group(TYPSEM) priors(proportional) ties(random) lootable
