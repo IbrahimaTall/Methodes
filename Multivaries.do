@@ -34,6 +34,7 @@ screeplot, mean
 discrim knn PROD SEM REV, group(TYPSEM) k(3) priors(proportional) ties(nearest) measure(absolute)
 discrim lda PROD SEM REV, group(TYPSEM) priors(proportional) ties(random) lootable
 discrim logistic CRED FORM SITMAT EDU, group(TYPSEM) priors(proportional) ties(random)
+discrim qda
 
 estat classtable, class priors(proportional) ties(random) title("Discrimination")
 estat errorrate, class priors(proportional) pp(stratified) ties(random) title("Discrimination") //count
