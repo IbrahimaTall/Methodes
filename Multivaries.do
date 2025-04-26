@@ -37,7 +37,10 @@ estat anti, nocorr nocov format(%9.1f)
 * Display the Kaiser–Meyer–Olkin measure of sampling adequacy
 estat kmo, novar format(%9.1f)
 * Display the component-loading matrix
-estat loadings, cnorm(unit | eigen | inveigen) format(%9.1f)
+estat loadings, cnorm(unit) format(%9.1f)
+estat loadings, cnorm(eigen) format(%9.1f)
+estat loadings, cnorm(inveigen) format(%9.1f)
+* Display the differences in matrices
 
 *#################### 4. Analyse discriminantes
 discrim knn PROD SEM REV, group(TYPSEM) k(3) priors(proportional) ties(nearest) measure(absolute)
