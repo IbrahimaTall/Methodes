@@ -36,6 +36,7 @@ pca PROD SEM REV, factor(2) covariance means vce(normal)
 estat anti, nocorr nocov format(%9.1f)
 * Display the Kaiser–Meyer–Olkin measure of sampling adequacy
 estat kmo, novar format(%9.1f)
+* Display the component-loading matrix
 
 *#################### 4. Analyse discriminantes
 discrim knn PROD SEM REV, group(TYPSEM) k(3) priors(proportional) ties(nearest) measure(absolute)
