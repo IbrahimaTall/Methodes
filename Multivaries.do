@@ -41,7 +41,7 @@ estat loadings, cnorm(unit) format(%9.1f)
 estat loadings, cnorm(eigen) format(%9.1f)
 estat loadings, cnorm(inveigen) format(%9.1f)
 * Display the differences in matrices
-
+estat residuals , obs fitted format(%9.1f)
 *#################### 4. Analyse discriminantes
 discrim knn PROD SEM REV, group(TYPSEM) k(3) priors(proportional) ties(nearest) measure(absolute)
 discrim lda PROD SEM REV, group(TYPSEM) priors(proportional) ties(random) lootable
