@@ -32,9 +32,10 @@ screeplot, mean
 *#################### 3. Analyse des composantes principales
 pca PROD SEM REV, components(2) correlation means vce(normal)
 pca PROD SEM REV, factor(2) covariance means vce(normal)
-
 * anti-image correlation and covariance matrices
 estat anti, nocorr nocov format(%9.1f)
+* Display the Kaiser–Meyer–Olkin measure of sampling adequacy
+
 *#################### 4. Analyse discriminantes
 discrim knn PROD SEM REV, group(TYPSEM) k(3) priors(proportional) ties(nearest) measure(absolute)
 discrim lda PROD SEM REV, group(TYPSEM) priors(proportional) ties(random) lootable
