@@ -45,6 +45,7 @@ estat residuals , obs fitted format(%9.1f)
 * Display the unrotated and rotated components
 estat rotatecompare, format(%9.1f)
 * Display the squared multiple correlations
+estat smc, format(%9.1f)
 
 *#################### 4. Analyse discriminantes
 discrim knn PROD SEM REV, group(TYPSEM) k(3) priors(proportional) ties(nearest) measure(absolute)
