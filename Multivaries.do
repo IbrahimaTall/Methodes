@@ -30,6 +30,7 @@ estat summarize, crossed labels
 screeplot, mean
 
 *#################### 2. Analyse factorielle (Factor analysis)
+L'analyse est de type pca
 
 *#################### 3. Analyse des composantes principales
 pca PROD SEM REV, components(2) correlation means vce(normal)
