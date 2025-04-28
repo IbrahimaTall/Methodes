@@ -28,7 +28,9 @@ estat coordinates SITMAT TYPSEM, normalize(principal) stats
 estat subinertia //Méthode Joint seulement
 estat summarize, crossed labels
 screeplot, mean
+
 *#################### 2. Analyse factorielle (Factor analysis)
+
 *#################### 3. Analyse des composantes principales
 pca PROD SEM REV, components(2) correlation means vce(normal)
 pca PROD SEM REV, factor(2) covariance means vce(normal)
