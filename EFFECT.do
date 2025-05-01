@@ -4,7 +4,6 @@ use effectdata.dta, clear
 describe
 * Structure des semences reçu par les ménages par région et par campagne
 table (REG)(CAMP) if inlist(REG,6,7,8,9,11,12,14) & CAMP > 2021, statistic(mean SEM) nformat(%9.0fc)
-
 *##############################################################################
 *################ Double différences ##########################################
 * Impact des dons en semences
