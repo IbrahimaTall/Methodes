@@ -8,7 +8,6 @@ table (REG)(CAMP) if inlist(REG,6,7,8,9,11,12,14) & CAMP > 2021, statistic(mean 
 *################ Double différences ##########################################
 * Impact des dons en semences
 didregress (PROD PARC MAT CRED AGE i.TYPSEM i.TYPSEM)(SEM, continuous), group(REG) time(CAMP)
-
 * Variable de traitement de type binaire
 generate PROG = SEM != 0
 label variable PROG "Identification des bénéficiaires"
