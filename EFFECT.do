@@ -13,7 +13,6 @@ generate PROG = SEM != 0
 label variable PROG "Identification des bénéficiaires"
 * Impact des dons en semences
 didregress (PROD PARC MAT CRED AGE i.TYPSEM i.TYPSEM)(PROG), group(REG) time(CAMP)
-
 * Diagnostic des tendences parallèles
 estat trendplots, title("")
 qui graph export grdid1.png, as(png) replace
