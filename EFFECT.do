@@ -71,11 +71,9 @@ graph export gripw1.png, as(png) replace
 *######### Méthode augmentée Pondération par inverse des propensions ###########
 * Estimation de l'ATE
 teffects aipw (PROD PARC MAT CRED i.TYPSEM, poisson noconstant)(PROG AGE i.SITMAT, logit noconstant), ate nolog
-
 * Qualité des propensions sur l'âge
 tebalance density AGE, line1opts(lcolor(red)) line2opts(lcolor(yellow))
 graph export graipw2w.png, as(png) replace
-
 * Qalité globale
 tebalance overid, nolog // sauf nnmatch et psmatch
 
