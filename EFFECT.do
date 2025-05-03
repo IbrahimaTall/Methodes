@@ -64,11 +64,9 @@ tebalance density AGE, kernel(epanechnikov)
 graph export gripw2.png, as(png) replace
 * Test de bonne qualité des propensions
 tebalance overid, nolog // sauf nnmatch et psmatch
-
 * Support communs
 teoverlap, kernel(epanechnikov)
 graph export gripw1.png, as(png) replace
-
 *###############################################################################
 *######### Méthode augmentée Pondération par inverse des propensions ###########
 * Estimation de l'ATE
