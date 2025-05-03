@@ -59,11 +59,9 @@ margins, dydx(PROG)
 *###############################################################################
 *####################### Inverse des propensions ###############################
 teffects ipw (PROD)(PROG PARC MAT CRED AGE i.SITMAT i.TYPSEM, logit noconstant), atet
-
 * Qualité des propensions
 tebalance density AGE, kernel(epanechnikov)
 graph export gripw2.png, as(png) replace
-
 * Test de bonne qualité des propensions
 tebalance overid, nolog // sauf nnmatch et psmatch
 
