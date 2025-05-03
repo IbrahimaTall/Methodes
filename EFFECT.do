@@ -36,14 +36,12 @@ twoway (scatter PROD REV if !PROG, sort msize(vsmall) msymbol(circle_hollow)) //
 graph export rdd.png, as(png) replace
 * RDD avec variables explicatives
 teffects ra (PROD REV PARC MAT CRED AGE i.SITMAT i.TYPSEM, poisson noconstant)(PROG), atet nolog
-
 quietly {
     * Contrefactuel d'un participant    
     reg PROD REV PARC MAT CRED AGE i.SITMAT i.TYPSEM if !PROG
     predict w1 if PROG
     summarize w1
     local pw1 = r(mean) 
-    
     * Production total des participants
     summarize PROD if PROG
     local pwt = r(mean)
