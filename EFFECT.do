@@ -16,13 +16,10 @@ didregress (PROD PARC MAT CRED AGE i.TYPSEM i.TYPSEM)(PROG), group(REG) time(CAM
 * Diagnostic des tendences parallèles
 estat trendplots, title("")
 qui graph export grdid1.png, as(png) replace
-
 * Test de tendence parallèles
 estat ptrends
-
 * Causalité du programme sur la production
 estat granger
-
 * Illustration de la causalité
 estat grangerplot
 qui graph export grdid2.png, as(png) replace
