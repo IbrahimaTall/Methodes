@@ -76,16 +76,13 @@ tebalance density AGE, line1opts(lcolor(red)) line2opts(lcolor(yellow))
 graph export graipw2w.png, as(png) replace
 * Qalité globale
 tebalance overid, nolog // sauf nnmatch et psmatch
-
 * Support commun
 teoverlap, kernel(epanechnikov) line1opts(lcolor(red)) line2opts(lcolor(yellow))
 graph export graipw1.png, as(png) replace
-
 *###############################################################################
 *###### Pondération par inverse des propensions et régression augmentée ########
 * Esimation de l'éffet moyen
 teffects ipwra (PROD PARC MAT CRED, poisson noconstant)(PROG AGE i.TYPSEM i.TYPSEM, logit noconstant), atet nolog
-
 * Qualité des propensions
 tebalance density AGE, line1opts(lcolor(red)) line2opts(lcolor(green))
 graph export gripwra2.png, as(png) replace
