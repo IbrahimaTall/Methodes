@@ -47,13 +47,11 @@ quietly {
     local pwt = r(mean)
 }
 display as txt "ATET = " as res `pwt' - `pw1'
-
 *###############################################################################
 *################## Variables intrumentales ####################################
 * Le Model et l'ATET
 quietly eregress PROD PARC MAT CRED i.TYPSEM, entreat(PROG = AGE i.SITMAT) vce(robust) nolog
 estat teffects, atet
-
 * Estimation par double moindres carrée
 ivregress 2sls PROD PARC MAT CRED i.TYPSEM (PROG = AGE i.SITMAT), noheader
 
