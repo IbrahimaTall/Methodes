@@ -54,10 +54,8 @@ quietly eregress PROD PARC MAT CRED i.TYPSEM, entreat(PROG = AGE i.SITMAT) vce(r
 estat teffects, atet
 * Estimation par double moindres carrée
 ivregress 2sls PROD PARC MAT CRED i.TYPSEM (PROG = AGE i.SITMAT), noheader
-
 * Estimation de l'ATET
 margins, dydx(PROG)
-
 *###############################################################################
 *####################### Inverse des propensions ###############################
 teffects ipw (PROD)(PROG PARC MAT CRED AGE i.SITMAT i.TYPSEM, logit noconstant), atet
