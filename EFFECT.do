@@ -27,7 +27,6 @@ qui graph export grdid2.png, as(png) replace
 *################ Régression sur discontinuité #################################
 * Vérifions que PROG = 1 si REV < 250
 assert PROG == (REV < 250)
-
 * Continuité de PROD par rapport à REV à c0 = 250
 twoway (scatter PROD REV if !PROG, sort msize(vsmall) msymbol(circle_hollow)) ///
  (scatter PROD REV if PROG, sort mcolor(blue) msize(vsmall) msymbol(circle_hollow)) ///
@@ -35,7 +34,6 @@ twoway (scatter PROD REV if !PROG, sort msize(vsmall) msymbol(circle_hollow)) //
  (lfit PROD REV if PROG, lcolor(dknavy) msize(small) lwidth(medthin) lpattern(solid)), ///
  xtitle(Revenu du ménage) xline(250) legend(off) 
 graph export rdd.png, as(png) replace
-
 * RDD avec variables explicatives
 teffects ra (PROD REV PARC MAT CRED AGE i.SITMAT i.TYPSEM, poisson noconstant)(PROG), atet nolog
 
