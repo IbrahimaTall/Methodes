@@ -23,7 +23,6 @@ estat granger
 * Illustration de la causalité
 estat grangerplot
 qui graph export grdid2.png, as(png) replace
-
 *###############################################################################
 *################ Régression sur discontinuité #################################
 * Vérifions que PROG = 1 si REV < 250
