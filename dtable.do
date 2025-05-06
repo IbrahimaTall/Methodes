@@ -1,6 +1,6 @@
 use "C:\Users\IBRAHIMA TALL\Documents\COURS\Regression\effectdata.dta", clear
 * la syntaxe
-dtable PROD REV SEM AGE i.TYPSEM i.SITMAT i.EDU, name(macollection) by(CAMP, tests testnotes totals missing) ///
+dtable PROD REV SEM AGE i.TYPSEM i.SITMAT i.EDU, name(macollection) by(CAMP, tests testnotes totals missing) /// line 1
  column(by(label, nofvlabel halign(center) font(, size(12) color(burlywood) variant(smallcaps) bold italic strikeout underline) ///
  smcl(error) latex(textsc) shading(background(beige) foreground(antiquewhite) pattern(diagCross))) ///
  test(Les tests statistiques, halign(center) nohide font(, size(12) color(darkblue) variant(normal) bold italic strikeout underline) ///
