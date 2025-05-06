@@ -3,7 +3,7 @@ use "C:\Users\IBRAHIMA TALL\Documents\COURS\Regression\effectdata.dta", clear
 dtable PROD REV SEM AGE i.TYPSEM i.SITMAT i.EDU, name(macollection) by(CAMP, tests testnotes totals missing) /// line 1
  column(by(label, nofvlabel halign(center) font(, size(12) color(burlywood) variant(smallcaps) bold italic strikeout underline) /// line 2
  smcl(error) latex(textsc) shading(background(beige) foreground(antiquewhite) pattern(diagCross))) /// line 3
- test(Les tests statistiques, halign(center) nohide font(, size(12) color(darkblue) variant(normal) bold italic strikeout underline) ///
+ test(Les tests statistiques, halign(center) nohide font(, size(12) color(darkblue) variant(normal) bold italic strikeout underline) /// line 4
  smcl(text) latex(textbf) shading( background(crimson) foreground(coral) pattern(gray12p5))) ///
  total(Les Totaux, halign(center) nohide font(, size(12) color(aliceblue) variant(allcaps) bold italic strikeout underline) ///
  smcl(result) latex(textbf) shading( background(aqua) foreground(blue) pattern(solid)))) ///
