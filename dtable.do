@@ -9,7 +9,7 @@ dtable PROD REV SEM AGE i.TYPSEM i.SITMAT i.EDU, name(macollection) by(CAMP, tes
  smcl(result) latex(textbf) shading( background(aqua) foreground(blue) pattern(solid)))) /// line 7
  sample(Les effectifs, statistic(frequency) place(inlabels) font(Mon titre, size(12) color(crimson) variant(normal) bold ///
  italic strikeout underline) smcl(text) latex(textsf) shading( background(chocolate) foreground(coral) pattern(horzStripe))) ///
- continuous( AGE SEM PROD REV, statistics( mean variance) test(kwallis) font(Les variables continues, size(12) color(red) ///
+ continuous( AGE SEM PROD REV, statistics( mean variance) test(kwallis) font(Les variables continues, size(12) color(red) /// line 10
  variant(allcaps) bold italic strikeout underline) smcl(result) latex(textbf) shading( background(violet) foreground(teal) ///
  pattern(gray50) )) factor(SITMAT EDU, statistics( fvproportion) test(kendall) font(Les variables catégorielles, size(12) color(tan) ///
  variant(allcaps) bold italic strikeout underline) smcl(result) latex(textbf) shading( background(bisque) foreground(azure) ///
