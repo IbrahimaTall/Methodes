@@ -1,5 +1,5 @@
 use "C:\Users\IBRAHIMA TALL\Documents\COURS\Regression\effectdata.dta", clear
-
+* la syntaxe
 dtable PROD REV SEM AGE i.TYPSEM i.SITMAT i.EDU, name(macollection) by(CAMP, tests testnotes totals missing) ///
  column(by(label, nofvlabel halign(center) font(, size(12) color(burlywood) variant(smallcaps) bold italic strikeout underline) ///
  smcl(error) latex(textsc) shading(background(beige) foreground(antiquewhite) pattern(diagCross))) ///
