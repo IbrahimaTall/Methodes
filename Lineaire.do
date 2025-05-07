@@ -1,7 +1,7 @@
-* Le modèle linéaire est un support pour plusieurs modèles économétriques.
+/* Le modèle linéaire est un support pour plusieurs modèles économétriques.
 * La compréhension de ce modèle est essentiel en termes de fonctionnement et de conditions de validité.
 * Ce tutoriel permet de mettre en pratique le modèle linéaire multiple sur tous ses aspects
-* En appliquant les tests paramétriques, les contraintes et la prévision.
+* En appliquant les tests paramétriques, les contraintes et la prévision.*/
 use "C:\Users\IBRAHIMA TALL\Documents\COURS\Regression\effectdata.dta"
 regress PROD SEM REV AGE MAT CRED
 estimates store mymodel
