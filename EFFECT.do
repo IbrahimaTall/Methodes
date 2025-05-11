@@ -14,7 +14,7 @@ label variable PROG "Identification des bénéficiaires"
 * Impact des dons en semences
 didregress (PROD PARC MAT CRED AGE i.TYPSEM i.TYPSEM)(PROG), group(REG) time(CAMP)
 * Diagnostic des tendences parallèles
-estat trendplots, title("")
+estat trendplots, title("Tendance parallèles")
 qui graph export grdid1.png, as(png) replace
 * Test de tendence parallèles
 estat ptrends
