@@ -14,3 +14,5 @@ list benefitingcountry agency spent in 1/10 // this gives us the first 10 lines
 list benefitingcountry agency spent in 1/10
 sum spent, d // gives more detail
 bysort fiscalyear: sum spent
+table fiscalyear, c(mean spent med spent count spent)
+table fiscalyear if sector == "Agriculture", c(mean spent med spent)
