@@ -16,3 +16,4 @@ sum spent, d // gives more detail
 bysort fiscalyear: sum spent
 table fiscalyear, c(mean spent med spent count spent)
 table fiscalyear if sector == "Agriculture", c(mean spent med spent)
+table fiscalyear sector	if inlist(sector, "Agriculture", "Nutrition", "Malaria"), c(mean spent)
