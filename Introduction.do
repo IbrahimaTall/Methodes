@@ -9,3 +9,6 @@ browse
 use FAD.dta
 describe
 sort spent
+gsort - spent //allows us to sort in decending order (negative sign)
+list benefitingcountry agency spent in 1/10 // this gives us the first 10 lines
+list benefitingcountry agency spent in 1/10
