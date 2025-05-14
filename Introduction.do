@@ -5,3 +5,7 @@ cd $pathin // this changes our working directory location
 insheet using "StataTraining.csv", clear
 save FAD.dta, /// file will save to the same directory we defined working in
 replace	//replaces the file if its already existing
+browse
+use FAD.dta
+describe
+sort spent
