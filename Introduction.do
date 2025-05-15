@@ -47,3 +47,7 @@ browse rank operatingunit spent if fiscalyear==2013
 egen meanexp = mean(spent), by(fiscalyear)
 gen highexp = 0 // all OUs are given a zero
 replace highexp = 1 if spent > meanexp 
+lab var highexp "Ag expenditures greater than avg"
+lab def yn 0 "No" 1 "Yes"
+lab val highexp yn
+tab fiscalyear highexp
