@@ -35,3 +35,5 @@ lab def lqtr 1 "Q1" 2 "Q2" 3 "Q3" 4"Q4"
 lab val qtr lqtr
 codebook qtr
 browse qtr
+encode sector, gen(sect)
+encode category, gen(cat)
