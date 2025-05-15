@@ -19,3 +19,9 @@ table fiscalyear if sector == "Agriculture", c(mean spent med spent)
 table fiscalyear sector	if inlist(sector, "Agriculture", "Nutrition", "Malaria"), c(mean spent)
 hist spent if fiscalyear==2012 & fiscalyeartype=="Obligations", frequency
 graph bar (sum) spent if fiscalyear==2012 & fiscalyeartype=="Obligations", over(agency)
+preserve {
+    collapse (sum) spent, by(fiscalyear agency)
+    sort fiscalyear
+    twoway connected spent fiscalyear if agency=="USAID" || connected spent fiscalyear if agency=="MCC"
+}
+restore
