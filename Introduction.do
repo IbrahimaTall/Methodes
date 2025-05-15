@@ -29,3 +29,4 @@ sysuse census.dta
 use FAD.dta, clear
 gen spent_mil = spent/1000000
 lab var spent_mil "Amount, millions USD"
+format spent_mil %9.0fc //adding formatting - see help format
