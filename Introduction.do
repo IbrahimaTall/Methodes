@@ -26,3 +26,5 @@ preserve {
 }
 restore
 sysuse census.dta
+use FAD.dta, clear
+
