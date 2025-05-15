@@ -40,3 +40,4 @@ encode category, gen(cat)
 order sect cat, after(benefitingcountry)
 drop sector category spent2
 drop if operatingunit=="Worldwide"
+collapse (sum) spent if sector == "Agriculture", by(fiscalyear sector operatingunit)
