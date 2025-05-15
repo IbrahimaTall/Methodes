@@ -33,3 +33,5 @@ format spent_mil %9.0fc //adding formatting - see help format
 list operatingunit agencyname spent_mil in 1/10
 lab def lqtr 1 "Q1" 2 "Q2" 3 "Q3" 4"Q4"
 lab val qtr lqtr
+codebook qtr
+browse qtr
