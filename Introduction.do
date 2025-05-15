@@ -41,3 +41,6 @@ order sect cat, after(benefitingcountry)
 drop sector category spent2
 drop if operatingunit=="Worldwide"
 collapse (sum) spent if sector == "Agriculture", by(fiscalyear sector operatingunit)
+egen rank = rank(-spent), by(fiscalyear) //negative added to sort in decending order
+sort fiscalyear rank
+browse rank operatingunit spent if fiscalyear==2013
