@@ -25,3 +25,4 @@ preserve {
     twoway connected spent fiscalyear if agency=="USAID" || connected spent fiscalyear if agency=="MCC"
 }
 restore
+sysuse census.dta
