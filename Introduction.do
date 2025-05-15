@@ -38,3 +38,4 @@ browse qtr
 encode sector, gen(sect)
 encode category, gen(cat)
 order sect cat, after(benefitingcountry)
+drop sector category spent2
