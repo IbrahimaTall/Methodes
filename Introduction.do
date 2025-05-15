@@ -44,3 +44,4 @@ collapse (sum) spent if sector == "Agriculture", by(fiscalyear sector operatingu
 egen rank = rank(-spent), by(fiscalyear) //negative added to sort in decending order
 sort fiscalyear rank
 browse rank operatingunit spent if fiscalyear==2013
+egen meanexp = mean(spent), by(fiscalyear)
