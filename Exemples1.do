@@ -1,5 +1,5 @@
 global pathin "/Users/Aaron/Desktop/StataTraining/Day1/Data/"
-	cd $pathin
+cd $pathin
 * import csv file
 	insheet using "PEPFAR-Data-Genie-MER-2015-12-19.csv"
 * replace value in unnecessary columns
