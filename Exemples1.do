@@ -1,16 +1,4 @@
-// Example 1: Constantly removing rows and columns to save space //
-
-/* Background:
-	I've developed an Excel visualization tool to look at various 
-	pediatrics indicators related to HIV/AIDS pulled from DATIM.org
-	on a quarterly basis. With lots of indicators for each country 
-	at the implementing mechanism level, I need to free up some space.
-	To do so, I constantly need to remove data from unnessary columns
-	as well as any rows where the indicator value equals zero. Automating
-	this task takes a lot less time */
-	
-* set directory
-	global pathin "/Users/Aaron/Desktop/StataTraining/Day1/Data/"
+global pathin "/Users/Aaron/Desktop/StataTraining/Day1/Data/"
 	cd $pathin
 * import csv file
 	insheet using "PEPFAR-Data-Genie-MER-2015-12-19.csv"
