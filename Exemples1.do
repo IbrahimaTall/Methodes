@@ -2,14 +2,11 @@ global pathin "/Users/Aaron/Desktop/StataTraining/Day1/Data/"
 cd $pathin
 * Importer un fichier csv
 insheet using "PEPFAR-Data-Genie-MER-2015-12-19.csv"
-* replace value in unnecessary columns
-* create local variable for all variables to keep
- 	local keepvlist operatingunit period dataelementname ///
-		disaggregate categoryoptioncomboname resulttarget ///
-		value orglevel4name orglevel5name orglevel6name ///
-		orglevel7name orglevel8name fundingagency 
-* identify variables to remove values
-	ds `keepvlist', not
+* Macro des variables à conserver
+local keepvlist operatingunit period dataelementname disaggregate categoryoptioncomboname resulttarget ///
+value orglevel4name orglevel5name orglevel6name orglevel7name orglevel8name fundingagency 
+* Identifier les variables non conservées
+ds `keepvlist', not // not = qui ne sont sur la liste
 * string variables for replacing value purposes
 	tostring `r(varlist)', replace
 * identify full list again
