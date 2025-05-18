@@ -16,11 +16,8 @@ input str19 agency _1st _2nd _3rd _4th
 "USAID" 428	559 429	667
 "USDA" 1	0	1	0
 end
-
 saveold "column_numbers.dta", replace version(12)
-
 * How easily can I summarize this data?
-
 * Rename the variables to real names
 rename (_1st _2nd _3rd _4th) (qtr1 qtr2 qtr3 qtr4)
 
