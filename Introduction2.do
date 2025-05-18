@@ -20,17 +20,12 @@ saveold "column_numbers.dta", replace version(12)
 * How easily can I summarize this data?
 * Rename the variables to real names
 rename (_1st _2nd _3rd _4th) (qtr1 qtr2 qtr3 qtr4)
-
 * Melt the data so that each row is an entry for each agency, by quarter
 reshape long qtr, i(agency) j(quarter)
 rename qtr freq
-
 * Free axis versus fixed. 
 graph bar (mean) freq, over(quarter) by(agency, style(compact) rows(1)) scheme(s1color)
 graph bar (mean) freq, over(quarter) by(agency, yrescale style(compact) rows(1))
-
-
-
 * ------------------------------------------------- *
 * ### Multiple variables are stored in 1 column ###
 clear all
