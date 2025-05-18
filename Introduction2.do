@@ -1,13 +1,4 @@
-/*-------------------------------------------------------------------------------
-# Name:		StataTrainingDay2
-# Purpose:	Messy data examples and solutions
-# Author:	Tim Essam, Ph.D.
-# Created:	2015/12/28
-# Owner:	Tim Essam - USAID GeoCenter | OakStream Systems, LLC
-# License:	MIT License
-# Ado(s):	see below
-#-------------------------------------------------------------------------------
-*/
+*-------------------------------------------------------------------------------
 clear
 capture log close
 
