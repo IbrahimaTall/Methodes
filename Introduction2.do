@@ -65,9 +65,6 @@ rename *FY *
 * Reshape again, based on the qtr values
 reshape long q@, i(country year) j(qtr)
 rename q freq 
-
-
-
 * ------------------------------------------------- *
 * ### Variables stored in both rows and columns ### *
 * More complicated example using mutiple reshapes
@@ -81,33 +78,27 @@ input str6 stringid	str6 good year2011 year2012
 "Rwanda" "maize"	4.78	6.46
 end
 saveold "vars_row_columns.dta", replace version(12)
-
 * Goal: Transform data so each good is organized as a panel, by country
 * Country will be the unique identifier, and the suffix of the year variable is 
 * the name of each good.
 reshape wide year*, i(stringid) j(good, string)
-
 * Why doesn't the following work? 
 cap reshape long year2011coffee year2012coffee year2011maize year2012maize, i(stringid) j(year)
-
 * Stata is looking for a variable named _gooda#_ _goodb#_
 * What we provided is not sufficient for the function. Let's rename our variables and try again
 rename (year2011coffee year2012coffee year2011maize year2012maize) /*
 */ (coffee2011 coffee2012 maize2011 maize2012)
-
 /* If you have numerous variables a general solution maybe more appropriate, such as:
 foreach x of varlist year* {
 	local n1: variable label `x'
 	local n2 = strtoname("`n1'")
 	rename `x' `n2'
-	}
+}
 *end
 rename *_year* **
 */
 reshape long coffee@ maize@, i(stringid) j(year)
 list, clean noo
-
-
 * ------------------------------------------------- *
 * ### Reshape examples ###
 clear
