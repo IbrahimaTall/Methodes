@@ -37,19 +37,15 @@ input str3 country str5 agency q1FY2009 q2FY2009 q3FY2009 q4FY2009 q1FY2010 q2FY
 "AZE"	"USAID"	116	239	330	34	92	315	312	220
 end
 saveold "mVars_column.dta", replace version(12)
-
 * Melt data based on the time variable, country is the unique identifier
 reshape long q@, i(country) j(time, string)
-
 * Grab the 1st value of each observations in the time variable
 generate qtr = real(substr(time, 1, 1))
-
 * Create a time variable using a similar approach. The real() function returns 
 * a numeric when a number is coded as a string. Returns missing if no numbers are found.
 generate year = real(substr(time, 4, 7))
 sort country  year qtr
 order country agency qtr year q
-
 * --- Alternative method: using reshape twice --- *
 clear all
 input str3 country str5 agency q1FY2009 q2FY2009 q3FY2009 q4FY2009 q1FY2010 q2FY2010 q3FY2010 q4FY2010
@@ -59,7 +55,6 @@ input str3 country str5 agency q1FY2009 q2FY2009 q3FY2009 q4FY2009 q1FY2010 q2FY
 "ARM"	"USAID"	86	89	127	212	394	255	141	74
 "AZE"	"USAID"	116	239	330	34	92	315	312	220
 end
-
 * First, reshape based on the year values
 reshape long q1FY@ q2FY@ q3FY@ q4FY@, i(country) j(year)
 sort country year
