@@ -315,37 +315,26 @@ local gopts "graphregion(fcolor(none) ifcolor(none))"
 
 twoway(connected spent fiscalyear, `lineopt' )/*
 */if agency == "USAID", by(category,  note("")) yscale(noline) `labopts' `layout' scheme(s1mono) `gopts'
-
-
-
-
 * --------------------------------------------
 * === Collapsing Solution === *
 * Load data
 webuse "StataTrainingClean.dta", clear
-
 * Keep only observations from agency == USAID
 keep if inlist(agency, "USAID") & fiscalyeartype == "Disbursements"
-
 * Collapse data down, summing total price by fiscalyear and category
 collapse (sum) spent, by(fiscalyear category)
 la var spent "aggregate disbursements"
-
 * Tabulate results
 table category fiscalyear, c(mean spent) format(%9.2fc)
-
 * Plot results
 twoway(connected spent fiscalyear, sort), by(category) ///
 scheme(s1color) subtitle(, size(vsmall))
-
 * === Extra Credit === *
 use "StataTrainingClean.dta", clear
 collapse (sum) spent, by(fiscalyear fiscalyeartype qtr agency)
-
 * Look at patterns
 bysort fiscalyeartype: table fiscalyear qtr if inlist(agency, "USAID") & ///
 inrange(fiscalyear, 2010, 2013), c(mean spent) format(%9.2fc)
-
 la var spent "Total spending (M USD)"
 * formatting graph
 * Can you plot or summarize aggregate spending now?
@@ -354,7 +343,6 @@ local layout "subtitle(, size(tiny) fcolor("245 245 245") bexpand)"
 local lineopt1 "lcolor("171 221 165") mcolor("102 194 165") mlcolor("white") msize(medium) lpattern(solid) msymbol(circle)" 
 local lineopt2 "lcolor("253 174 97") mcolor("244 109 67") mlcolor("white") msize(medium) lpattern(solid)"
 local gopts "graphregion(fcolor(none) ifcolor(none)) ylabel(, nogrid)"
-
 * Let's plot the patterns for USAID
 twoway(connected spent qtr if fiscalyeartype == "Disbursements", sort `lineopt2') ///
 (connected spent qtr if fiscalyeartype == "Obligations", sort `lineopt1') ///
@@ -362,31 +350,25 @@ if inlist(agency, "USAID") & inrange(fiscalyear, 2010, 2013), by(fiscalyear, not
 legend(order(1 "Obligations" 2 "Disbursements") nobox region(fcolor(none) lcolor(none)) ///
  size(tiny) span) subtitle(, size(vsmall)) ///
 `labopts' `layout' scheme(s1mono) `gopts'
-
 * -------------------------------------------------- *
 * === Estout ===*
 cls
 webuse "StataTrainingClean.dta", clear
-
 * Post results from the summary command to e(class) format
 estpost sum spent2 if inlist(fiscalyeartype, "Disbursements"), detail
 *ereturn list
-
 * Write selected statistics to a text file
 esttab . using "disbursement_means1.txt", cells("mean p50 sd min max count") noobs replace
-
 * Fix formatting and rewrite, saving over existing text file
 local fmt1 "mean (fmt(%12.2fc)) p50(fmt(%12.2fc)) sd(fmt(%12.2fc))"
 local fmt2 "min(fmt(%12.0fc)) max(fmt(%12.0fc)) count(fmt(%12.0fc))"
 esttab . using "disbursement_means2.txt", cells("`fmt1' `fmt2'") ///
 	noobs replace nomtitles nonum
-
 * -------------------------------------------------- *
 * === Estout Exercise === *
 cls
 webuse "StataTrainingClean.dta", clear
 estpost tabulate category fiscalyear if inrange(fiscalyear, 2009, 2013), nototal
-
 esttab using test.rtf, cell(b(fmt(0))) unstack noobs collabels(none) modelwidth(5) ///
 	nonumber varlabels(`e(labels)') eqlabels(`e(eqlabels)') ///
 	title({\b Table 1. }{\i Program management entries have increased sharply since 2009}) ///
