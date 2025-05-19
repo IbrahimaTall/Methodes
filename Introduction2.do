@@ -155,14 +155,12 @@ input id age hid
 2 20 101
 end
 saveold "ind_age.dta", replace version(12)
-
 clear
 input hid str4 income
 101 "$100"
 102 "$250"
 end
 saveold "hh.dta", replace version(12)
-
 clear
 input hid str4 income
 101 "$100"
@@ -170,7 +168,6 @@ input hid str4 income
 104 "$500"
 end
 saveold "hh2.dta", replace version(12)
-
 clear
 input id age hid
 1 45 101
@@ -181,7 +178,6 @@ input id age hid
 2 5  103
 end
 saveold "ind2.dta", replace version(12)
-
 * Messy data for merge exercise
 clear
 input hid str4 income
