@@ -1,34 +1,21 @@
-/*
-
-// ANALYTICAL QUESTIONS //
-
-	 - What was the average percent of the workforce employed in agriculture by 
-	    region in 2012?
-	 - How many people had access to improved sanitation in 2012 by region?
-	 - Visualize the relationship between access to improved sanitation and size 
-	    of a country's rural population in 2010 via a scatter plot.
-	 - How has population growth changed over the period of 2003-2012 across 
-	    different country income level groups?
-    
-// OUTLINE //
-
-	Part A - Import and Explore (Optional Section)
-		Review one WDI excel file
-		Import files via a loop
-		Import country meta data
+/* // OUTLINE //
+Part A - Import and Explore (Optional Section)
+Review one WDI excel file
+Import files via a loop
+Import country meta data
+	
+Part B - Append, Reshape and Clean
+Append all WDI .dta files together
+Rename years
+    Reshape twice
+    apply variable names and labels
+	
+Part C - Merge and Save
+    Merge meta data onto appended dataset
+    Save as .dta file
 		
-	Part B - Append, Reshape and Clean
-		Append all WDI .dta files together
-		Rename years
-		Reshape twice
-		apply variable names and labels
-		
-	Part C - Merge and Save
-		Merge meta data onto appended dataset
-		Save as .dta file
-		
-	Part D - Analysis
-		Answer questions for analysis
+Part D - Analysis
+    Answer questions for analysis
 */
 
 ********************************************************************************
