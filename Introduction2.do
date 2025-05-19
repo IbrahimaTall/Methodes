@@ -128,14 +128,11 @@ drop seriesname seriescode
 * Which country grew the most from 2009-2012
 * Visual answer
 twoway(connected gdp year), by(country) scheme(s1color)
-
 *Tabular answer
 table country year, c(mean gdp) f(%9.2f) col
-
 *egen way to create a variable of average growth
 egen gdp_ave = mean(gdp), by(country)
 tab country, sum(gdp_ave)
-
 * -------------------------------------------------- *
 * ### Merging Examples ###
 clear
@@ -146,14 +143,12 @@ input id age hid
 2 20 102
 end
 saveold "ind.dta", replace version(12)
-
 clear
 input id cows value
 1 2 2000
 2 1 500
 end
 saveold "ind_ag.dta", replace version(12)
-
 clear
 input id age hid
 1 45 101
