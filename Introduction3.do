@@ -1,13 +1,3 @@
-*********************************
-**                             **
-**  Day 3 Homework Assignment  **
-**           Answers           **
-**        Aaron Chafetz        **
-**          2/4/2016           **
-**                             **
-*********************************
-
-
 /*
 
 // ANALYTICAL QUESTIONS //
