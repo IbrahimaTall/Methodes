@@ -352,6 +352,5 @@ cls
 webuse "StataTrainingClean.dta", clear
 estpost tabulate category fiscalyear if inrange(fiscalyear, 2009, 2013), nototal
 esttab using test.rtf, cell(b(fmt(0))) unstack noobs collabels(none) modelwidth(5) ///
-	nonumber varlabels(`e(labels)') eqlabels(`e(eqlabels)') ///
-	title({\b Table 1. }{\i Program management entries have increased sharply since 2009}) ///
-	replace 
+ nonumber varlabels(`e(labels)') eqlabels(`e(eqlabels)') ///
+ title({\b Table 1. }{\i Program management entries have increased sharply since 2009}) replace 
