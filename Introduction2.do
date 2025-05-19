@@ -113,25 +113,18 @@ clist, noo
 reshape long gdp@ cpc@, i(id) j(year)
 * Revert back to original data
 reshape wide
-
-
-
 * ------------------------------------------------- *
 * ### Reshape Exercise  & Solution ###
 webuse "wb_gdp_wide.dta", clear
-
 /* How are data messy?
 1) Columns contain variables
 2) Series name is unclear
 */
-
 * Make the data tidy by using the reshape command.
 reshape long yr@, i(countryname) j(year)
-
 * Once reshaped, rename and label key variables. Drop uncessary variables.
 rename (countryname countrycode yr) (country ISO3 gdp)
 drop seriesname seriescode
-
 * Which country grew the most from 2009-2012
 * Visual answer
 twoway(connected gdp year), by(country) scheme(s1color)
