@@ -111,7 +111,7 @@ Part D - Analysis
 		lab var pop_rural "Rural population (% of total population)"
 		lab var sanitation "Improved sanitation facilities (% of population with access)"
 
-********************************************************************************
+*************************************************************************
 
 // PART C - Merge and Save Data //
 
