@@ -148,7 +148,7 @@ Part D - Analysis
 
 ** D.3 - Visualize the relationship between access to improved sanitation and size of a country's rural population in 2010 via a a scatter plot.
 
-	scatter sanitation pop_rural if year==2010 || lfit sanitation pop_rural
+	scatter sanitation pop_rural if year == 2010 || lfit sanitation pop_rural
 	
 ** D.4 - How has population growth changed over the period of 2003-2012 across different country income level groups?
 	collapse (sum) pop, by(inc year)
