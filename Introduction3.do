@@ -23,7 +23,7 @@ Part D - Analysis
 /// PART A - Import and Explore Data ///
 
 	*set directory
-		cd "/Users/Aaron/Desktop/StataTraining/Day3/Homework/WDI_Data"
+		cd WDI_Data"
 	*list the files in the directory
 		ls
 
