@@ -48,7 +48,7 @@ Part D - Analysis
 		}
 		*end
 
-** A.3 Import country meta data **
+** A.3 Import country meta data *****
 
 	*import meta Data on Countries
 		import excel "ag_empl.xls", sheet("Metadata - Countries") firstrow clear
