@@ -21,28 +21,25 @@ Part D - Analysis
 **************************************************************************
 
 /// PART A - Import and Explore Data ///
-
-	*set directory
-		cd WDI_Data"
-	*list the files in the directory
-		ls
+set directory
+cd WDI_Data"
+list the files in the directory
+ls
 
 ** A.1 Import one data set **
-
-	*import excel data from the "Data" tab, starting at row A4, reading in the first row as variable names
-		import excel "ag_empl.xls", sheet("Data") cellrange(A4:BH252) firstrow clear
-	*time to dig into the data
-		browse
-		describe
-		codebook, c
+import excel data from the "Data" tab, starting at row A4, reading in the first row as variable names
+import excel "ag_empl.xls", sheet("Data") cellrange(A4:BH252) firstrow clear
+time to dig into the data
+browse
+describe
+codebook, c
 
 ** A.2 Loop import over each of the indicator files **
-	
-	foreach x in ag_empl chldmort electricity health_exp_pc hivprev pop pop_rural sanitation{
-		*import excel data from the "Data" tab, starting at row A4, reading in the first row as variable names
-		import excel "`x'.xls", sheet("Data") cellrange(A4:BH252) firstrow clear
-		*replace IndicatorCode with the variable name for reshaping later
-		replace IndicatorCode = "`x'"
+foreach x in ag_empl chldmort electricity health_exp_pc hivprev pop pop_rural sanitation{
+import excel data from the "Data" tab, starting at row A4, reading in the first row as variable names
+import excel "`x'.xls", sheet("Data") cellrange(A4:BH252) firstrow clear
+replace IndicatorCode with the variable name for reshaping later
+replace IndicatorCode = "`x'"
 		*save as a Stata file
 		save "`x'.dta", replace
 		}
