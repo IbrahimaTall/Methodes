@@ -103,16 +103,15 @@ lab var sanitation "Improved sanitation facilities (% of population with access)
 // PART C - Merge and Save Data //
 
 ** C.1 - Merge metadata onto datafile **
-
-	*merge with ctry meta 
-		merge m:1 CountryCode using "ctrymeta.dta"
-		drop _merge //since everything merged other than unclassificed, we don't need this variable
-	*rename variables (all lower case for consistency)
-		rename CountryName ctry
-		rename CountryCode iso
-			lab var iso "ISO Country Code"
-		lab var year "Year"
-		order reg inc, before(ag_empl)
+merge with ctry meta 
+merge m:1 CountryCode using "ctrymeta.dta"
+drop _merge //since everything merged other than unclassificed, we don't need this variable
+rename variables (all lower case for consistency)
+rename CountryName ctry
+rename CountryCode iso
+lab var iso "ISO Country Code"
+lab var year "Year"
+order reg inc, before(ag_empl)
 
 ** C.2 - Save **
 	
