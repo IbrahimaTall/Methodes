@@ -40,22 +40,19 @@ import excel data from the "Data" tab, starting at row A4, reading in the first 
 import excel "`x'.xls", sheet("Data") cellrange(A4:BH252) firstrow clear
 replace IndicatorCode with the variable name for reshaping later
 replace IndicatorCode = "`x'"
-		*save as a Stata file
-		save "`x'.dta", replace
-		}
-		*end
+save as a Stata file
+save "`x'.dta", replace 
 
 ** A.3 Import country meta data *****
-
-	*import meta Data on Countries
-		import excel "ag_empl.xls", sheet("Metadata - Countries") firstrow clear
-	*encode region and income group for ease of use later
-		encode Region, gen(reg)
-		encode IncomeGroup, gen(inc)
-	*drop variables we will not use
-		drop Region IncomeGroup SpecialNotes
-	*save
-		save "ctrymeta.dta", replace
+import meta Data on Countries
+import excel "ag_empl.xls", sheet("Metadata - Countries") firstrow clear
+encode region and income group for ease of use later
+encode Region, gen(reg)
+encode IncomeGroup, gen(inc)
+drop variables we will not use
+drop Region IncomeGroup SpecialNotes
+save
+save "ctrymeta.dta", replace
 
 ********************************************************************************
 
