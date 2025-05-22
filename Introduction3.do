@@ -69,19 +69,18 @@ foreach year of var E-BH{
     local l`year' : variable label `year'
     rename `year' y`l`year''
 }
-	*only want to look at a 10 year period, so we can remove extra years
-		drop y1960-y2001 y2013-y2015
+*only want to look at a 10 year period, so we can remove extra years
+drop y1960-y2001 y2013-y2015
 
 ** B.3 - Reshape 1 (long format) **
-	
-	*reshape long to have one column for year, country, and flow
-		reshape long y@, i(CountryName IndicatorName) j(year)
-	*cleaning
-		drop IndicatorName //not needed; will be in variable label
-		encode IndicatorCode, gen(ind) //need to encode for reshape
-		drop IndicatorCode //no longer needed
-		order CountryName CountryCode year ind y //reorder for viewing when browsing
-		lab list ind //list for labeling variables after reshape
+reshape long to have one column for year, country, and flow
+reshape long y@, i(CountryName IndicatorName) j(year)
+*cleaning
+drop IndicatorName //not needed; will be in variable label
+encode IndicatorCode, gen(ind) //need to encode for reshape
+drop IndicatorCode //no longer needed
+order CountryName CountryCode year ind y //reorder for viewing when browsing
+lab list ind //list for labeling variables after reshape
 
 ** B.4 - Reshape 2 (wide) **
 	
