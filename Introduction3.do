@@ -57,22 +57,18 @@ save "ctrymeta.dta", replace
 ********************************************************************************
 
 // PART B - Append, Reshape, and Clean Data //	
+* B.1 Append files together **
+* open one of the datasets
+use "ag_empl.dta", clear
+append with the other datasets
+append using chldmort electricity  health_exp_pc hivprev pop pop_rural sanitation
 
-** B.1 Append files together **
-	
-	*open one of the datasets
-		use "ag_empl.dta", clear
-	*append with the other datasets
-		append using chldmort electricity  health_exp_pc hivprev pop pop_rural sanitation
-	
 ** B.2 - Rename years (loop and drop unncessary years **
-	
-	*add year labels to variables
-		foreach year of var E-BH{
-			local l`year' : variable label `year'
-			rename `year' y`l`year''
-			}
-		*end
+add year labels to variables
+foreach year of var E-BH{
+    local l`year' : variable label `year'
+    rename `year' y`l`year''
+}
 	*only want to look at a 10 year period, so we can remove extra years
 		drop y1960-y2001 y2013-y2015
 
