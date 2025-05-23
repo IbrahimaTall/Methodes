@@ -7,8 +7,8 @@ Import country meta data
 Part B - Append, Reshape and Clean
 Append all WDI .dta files together
 Rename years
-    Reshape twice
-    apply variable names and labels
+Reshape twice
+apply variable names and labels
 	
 Part C - Merge and Save
     Merge meta data onto appended dataset
