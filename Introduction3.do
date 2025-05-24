@@ -1,4 +1,4 @@
-/* // OUTLINE //
+/* 
 Part A - Import and Explore (Optional Section)
 Review one WDI excel file
 Import files via a loop
