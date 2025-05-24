@@ -3,7 +3,7 @@
 Review one WDI excel file
 Import files via a loop
 Import country meta data
-Part B - Append, Reshape and Clean
+******Part B - Append, Reshape and Clean
 Append all WDI .dta files together
 Rename years
 Reshape twice
