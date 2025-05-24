@@ -16,7 +16,6 @@ Save as .dta file
 */
 
 **************************************************************************
-
 /// PART A - Import and Explore Data ///
 set directory
 cd WDI_Data"
