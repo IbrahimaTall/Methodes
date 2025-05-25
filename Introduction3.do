@@ -31,22 +31,22 @@ codebook, c
 
 ** A.2 Loop import over each of the indicator files **
 foreach x in ag_empl chldmort electricity health_exp_pc hivprev pop pop_rural sanitation {
-    import excel data from the "Data" tab, starting at row A4, reading in the first row as variable names
+    * import excel data
     import excel "`x'.xls", sheet("Data") cellrange(A4:BH252) firstrow clear
-    replace IndicatorCode with the variable name for reshaping later
+    * replace IndicatorCode with the variable name for reshaping later
     replace IndicatorCode = "`x'"
-    save as a Stata file
+    * save as a Stata file
     save "`x'.dta", replace 
 }
 ** A.3 Import country meta data *****
-import meta Data on Countries
+* import meta Data on Countries
 import excel "ag_empl.xls", sheet("Metadata - Countries") firstrow clear
-encode region and income group for ease of use later
-encode Region, gen(reg)
-encode IncomeGroup, gen(inc)
-drop variables we will not use
+* encode region and income group for ease of use later
+encode Region, generate(reg)
+encode IncomeGroup, generate(inc)
+* drop variables we will not use
 drop Region IncomeGroup SpecialNotes
-save
+* save
 save "ctrymeta.dta", replace
 
 ********************************************************************************
