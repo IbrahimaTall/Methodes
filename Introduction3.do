@@ -18,7 +18,7 @@ Save as .dta file
 **************************************************************************
 /// PART A - Import and Explore Data ///
 set directory
-cd WDI_Data"
+cd "WDI_Data"
 list the files in the directory
 ls
 ** A.1 Import one data set **
