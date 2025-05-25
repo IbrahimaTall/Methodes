@@ -22,9 +22,9 @@ cd "WDI_Data"
 list the files in the directory
 ls
 ** A.1 Import one data set **
-* import "Data" tab starting at A4, first row as variable names
+* Import "Data" tab starting at A4, first row as variable names
 import excel "ag_empl.xls", sheet("Data") cellrange(A4:BH252) firstrow clear
-time to dig into the data
+* Time to dig into the data
 browse
 describe
 codebook, c
