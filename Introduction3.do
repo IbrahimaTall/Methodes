@@ -1,4 +1,4 @@
-/* 
+ /* 
 *******Part A - Import and Explore (Optional Section)
 Review one WDI excel file
 Import files via a loop
@@ -30,14 +30,14 @@ describe
 codebook, c
 
 ** A.2 Loop import over each of the indicator files **
-foreach x in ag_empl chldmort electricity health_exp_pc hivprev pop pop_rural sanitation{
-import excel data from the "Data" tab, starting at row A4, reading in the first row as variable names
-import excel "`x'.xls", sheet("Data") cellrange(A4:BH252) firstrow clear
-replace IndicatorCode with the variable name for reshaping later
-replace IndicatorCode = "`x'"
-save as a Stata file
-save "`x'.dta", replace 
-
+foreach x in ag_empl chldmort electricity health_exp_pc hivprev pop pop_rural sanitation {
+    import excel data from the "Data" tab, starting at row A4, reading in the first row as variable names
+    import excel "`x'.xls", sheet("Data") cellrange(A4:BH252) firstrow clear
+    replace IndicatorCode with the variable name for reshaping later
+    replace IndicatorCode = "`x'"
+    save as a Stata file
+    save "`x'.dta", replace 
+}
 ** A.3 Import country meta data *****
 import meta Data on Countries
 import excel "ag_empl.xls", sheet("Metadata - Countries") firstrow clear
