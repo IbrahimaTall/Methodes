@@ -55,7 +55,7 @@ save "ctrymeta.dta", replace
 * B.1 Append files together **
 * open one of the datasets
 use "ag_empl.dta", clear
-append with the other datasets
+* append with the other datasets
 append using chldmort electricity  health_exp_pc hivprev pop pop_rural sanitation
 
 ** B.2 - Rename years (loop and drop unncessary years **
