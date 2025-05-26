@@ -72,7 +72,7 @@ drop y1960-y2001 y2013-y2015
 reshape long y@, i(CountryName IndicatorName) j(year)
 * cleaning
 drop IndicatorName // not needed; will be in variable label
-encode IndicatorCode, gen(ind) //need to encode for reshape
+encode IndicatorCode, generate(ind) // need to encode for reshape
 drop IndicatorCode // no longer needed
 order CountryName CountryCode year ind y //reorder for viewing when browsing
 lab list ind //list for labeling variables after reshape
