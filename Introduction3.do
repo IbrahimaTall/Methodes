@@ -78,7 +78,7 @@ order CountryName CountryCode year ind y // reorder for viewing when browsing
 lab list ind // list for labeling variables after reshape
 
 ** B.4 - Reshape 2 (wide) **
-rehape wide to have one column for each variable
+* rehape wide to have one column for each variable
 reshape wide y@, i(CountryName CountryCode year) j(ind)
 
 ** B.5 - Label and rename variables **
