@@ -59,7 +59,7 @@ use "ag_empl.dta", clear
 append using chldmort electricity  health_exp_pc hivprev pop pop_rural sanitation
 
 ** B.2 - Rename years (loop and drop unncessary years **
-add year labels to variables
+* add year labels to variables
 foreach year of var E-BH{
     local l`year' : variable label `year'
     rename `year' y`l`year''
