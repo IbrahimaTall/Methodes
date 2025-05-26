@@ -19,7 +19,7 @@ Save as .dta file
 /// PART A - Import and Explore Data ///
 set directory
 cd "WDI_Data"
-list the files in the directory
+* list the files in the directory
 ls
 ** A.1 Import one data set **
 * Import "Data" tab starting at A4, first row as variable names
