@@ -64,7 +64,7 @@ foreach year of var E-BH{
     local l`year' : variable label `year'
     rename `year' y`l`year''
 }
-*only want to look at a 10 year period, so we can remove extra years
+* only want to look at a 10 year period, so we can remove extra years
 drop y1960-y2001 y2013-y2015
 
 ** B.3 - Reshape 1 (long format) **
