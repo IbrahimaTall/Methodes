@@ -94,14 +94,13 @@ lab var pop_rural "Rural population (% of total population)"
 lab var sanitation "Improved sanitation facilities (% of population with access)"
 
 *************************************************************************
-
 // PART C - Merge and Save Data //
 
 ** C.1 - Merge metadata onto datafile **
-merge with ctry meta 
+* merge with ctry meta 
 merge m:1 CountryCode using "ctrymeta.dta"
-drop _merge //since everything merged other than unclassificed, we don't need this variable
-rename variables (all lower case for consistency)
+drop _merge // since everything merged other than unclassificed, we don't need this variable
+* rename variables (all lower case for consistency)
 rename CountryName ctry
 rename CountryCode iso
 lab var iso "ISO Country Code"
@@ -109,33 +108,26 @@ lab var year "Year"
 order reg inc, before(ag_empl)
 
 ** C.2 - Save **
-	
-	save "wdi_meta_full.dta", replace
-	
+save "wdi_meta_full.dta", replace
 	
 ********************************************************************************
 
 // PART D - Analysis //
-
 ** D.1 - What was the average percent of the workforce employed in agriculture by region in 2012?
-	
-	tabstat ag_empl if year==2012, by(reg) stat(mean count) format(%9.1f)
+tabstat ag_empl if year==2012, by(reg) stat(mean count) format(%9.1f)
 
 ** D.2 - How many people had access to improved sanitation in 2012 by region?
-	
-	gen san_tot = int(pop*(sanitation/100))
-		lab var san_tot "Total People with improved Sanitation"
-	tabstat san_tot if year==2012, by(reg) stat(sum) format(%13.0fc)
+gen san_tot = int(pop*(sanitation/100))
+lab var san_tot "Total People with improved Sanitation"
+tabstat san_tot if year==2012, by(reg) stat(sum) format(%13.0fc)
 
 ** D.3 - Visualize the relationship between access to improved sanitation and size of a country's rural population in 2010 via a a scatter plot.
-
-	scatter sanitation pop_rural if year == 2010 || lfit sanitation pop_rural
+scatter sanitation pop_rural if year == 2010 || lfit sanitation pop_rural
 	
 ** D.4 - How has population growth changed over the period of 2003-2012 across different country income level groups?
-	collapse (sum) pop, by(inc year)
-	drop if inc == .
-	sort inc year
-	by inc: gen pop_gr = (pop - pop[_n-1])/pop[_n-1]*100
-		lab var pop_gr "Pop Growth Rate, %"
-	twoway connected pop_gr year, by(inc, title("Population Growth") sub("2003-2012"))
-	
+collapse (sum) pop, by(inc year)
+drop if inc == .
+sort inc year
+by inc: gen pop_gr = (pop - pop[_n-1])/pop[_n-1]*100
+lab var pop_gr "Pop Growth Rate, %"
+twoway connected pop_gr year, by(inc, title("Population Growth") sub("2003-2012"))
