@@ -117,9 +117,9 @@ save "wdi_meta_full.dta", replace
 tabstat ag_empl if year==2012, by(reg) stat(mean count) format(%9.1f)
 
 ** D.2 - How many people had access to improved sanitation in 2012 by region?
-gen san_tot = int(pop*(sanitation/100))
-lab var san_tot "Total People with improved Sanitation"
-tabstat san_tot if year==2012, by(reg) stat(sum) format(%13.0fc)
+generate san_tot = int(pop*(sanitation/100))
+label variable san_tot "Total People with improved Sanitation"
+tabstat san_tot if year==2012, by(reg) statistic(sum) format(%13.0fc)
 
 ** D.3 - Visualize the relationship between access to improved sanitation and size of a country's rural population in 2010 via a a scatter plot.
 scatter sanitation pop_rural if year == 2010 || lfit sanitation pop_rural
