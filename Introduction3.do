@@ -103,7 +103,7 @@ drop _merge // since everything merged other than unclassificed, we don't need t
 * rename variables (all lower case for consistency)
 rename CountryName ctry
 rename CountryCode iso
-lab var iso "ISO Country Code"
+label variable iso "ISO Country Code"
 lab var year "Year"
 order reg inc, before(ag_empl)
 
