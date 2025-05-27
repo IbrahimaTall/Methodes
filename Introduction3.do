@@ -75,7 +75,7 @@ drop IndicatorName // not needed; will be in variable label
 encode IndicatorCode, generate(ind) // need to encode for reshape
 drop IndicatorCode // no longer needed
 order CountryName CountryCode year ind y // reorder for viewing when browsing
-lab list ind // list for labeling variables after reshape
+label list ind // list for labeling variables after reshape
 
 ** B.4 - Reshape 2 (wide) **
 * rehape wide to have one column for each variable
