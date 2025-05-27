@@ -104,7 +104,7 @@ drop _merge // since everything merged other than unclassificed, we don't need t
 rename CountryName ctry
 rename CountryCode iso
 label variable iso "ISO Country Code"
-lab var year "Year"
+label variable year "Year"
 order reg inc, before(ag_empl)
 
 ** C.2 - Save **
