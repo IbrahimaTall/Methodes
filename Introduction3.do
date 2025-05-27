@@ -90,7 +90,7 @@ label variable electricity "Access to electricity (% of population)"
 label variable health_exp_pc "Health expenditure per capita (current US$)"
 label variable hivprev "Prevalence of HIV, total (% of population ages 15-49)"
 label variable pop "Population, total"
-lab var pop_rural "Rural population (% of total population)"
+label variable pop_rural "Rural population (% of total population)"
 lab var sanitation "Improved sanitation facilities (% of population with access)"
 
 *************************************************************************
