@@ -84,7 +84,7 @@ reshape wide y@, i(CountryName CountryCode year) j(ind)
 ** B.5 - Label and rename variables **
 * rename and label wdi variables
 rename (y1 y2 y3 y4 y5 y6 y7 y8)(ag_empl chldmort electricity health_exp_pc hivprev pop pop_rural sanitation)
-lab var ag_empl "Employment in agriculture (% of total employment)"
+label variable ag_empl "Employment in agriculture (% of total employment)"
 lab var chldmort "Mortality rate, under-5 (per 1,000)"
 lab var electricity "Access to electricity (% of population)"
 lab var health_exp_pc "Health expenditure per capita (current US$)"
