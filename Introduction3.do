@@ -86,7 +86,7 @@ reshape wide y@, i(CountryName CountryCode year) j(ind)
 rename (y1 y2 y3 y4 y5 y6 y7 y8)(ag_empl chldmort electricity health_exp_pc hivprev pop pop_rural sanitation)
 label variable ag_empl "Employment in agriculture (% of total employment)"
 label variable chldmort "Mortality rate, under-5 (per 1,000)"
-lab var electricity "Access to electricity (% of population)"
+label variable electricity "Access to electricity (% of population)"
 lab var health_exp_pc "Health expenditure per capita (current US$)"
 lab var hivprev "Prevalence of HIV, total (% of population ages 15-49)"
 lab var pop "Population, total"
