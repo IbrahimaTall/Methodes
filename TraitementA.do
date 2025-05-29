@@ -6,26 +6,16 @@ webuse set "https://github.com/GeoCenter/StataTraining/raw/master/Day2/Data"
 global dataurl "https://github.com/GeoCenter/StataTraining/raw/master/Day2/Data"
 capture log close
 log using "$pathlog\Day2Homework.log", replace
-* --- Homweork Exercise --- *
 import delimited "$dataurl/wb_indicators.csv", clear
-* What are these variables?
 browse
 describe
-* How many instances of missing data do we have to fix?
 count if inlist("..", yr2007, yr2008, yr2013, yr2014) == 1
-* Loop over each variable with missing and create a new variable
-* Want to replace missing with blanks for coercion to strings
 foreach x of varlist yr2007 yr2008 yr2013 yr2014 {
     replace `x' = "" if inlist("..", `x')
-    * Check that you are destrining the right things
     destring `x', gen(`x'_ds) 
 }
-*end
-* Drop string variables, rename years for reshaping below
 drop yr2007 yr2008 yr2013 yr2014
 rename *_ds* **
-* (Could also use destring, force options + mvencode)
-* relabel the series names to valid names
 drop seriescode
 replace seriesname = "gdp_growth" if seriesname == "GDP growth (annual %)"
 replace seriesname = "ag_gdp" if seriesname == "Agriculture, value added (% of GDP)"
