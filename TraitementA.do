@@ -1,11 +1,5 @@
 /*-------------------------------------------------------------------------------
-# Name:		StataTrainingDay2
-# Purpose:	Day two homework solution
-# Author:	Tim Essam, Ph.D.
-# Created:	2015/12/28
-# Owner:	Tim Essam - USAID GeoCenter | OakStream Systems, LLC
-# License:	MIT License
-# Ado(s):	see below
+Ibrahima Tall
 #-------------------------------------------------------------------------------
 */
 
