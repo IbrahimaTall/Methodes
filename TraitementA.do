@@ -4,10 +4,8 @@ Ibrahima Tall
 */
 webuse set "https://github.com/GeoCenter/StataTraining/raw/master/Day2/Data"
 global dataurl "https://github.com/GeoCenter/StataTraining/raw/master/Day2/Data"
-
 capture log close
 log using "$pathlog\Day2Homework.log", replace
-
 * --- Homweork Exercise --- *
 import delimited "$dataurl/wb_indicators.csv", clear
 * What are these variables?
@@ -23,7 +21,6 @@ foreach x of varlist yr2007 yr2008 yr2013 yr2014 {
     destring `x', gen(`x'_ds) 
 }
 *end
-
 * Drop string variables, rename years for reshaping below
 drop yr2007 yr2008 yr2013 yr2014
 rename *_ds* **
@@ -33,26 +30,9 @@ drop seriescode
 replace seriesname = "gdp_growth" if seriesname == "GDP growth (annual %)"
 replace seriesname = "ag_gdp" if seriesname == "Agriculture, value added (% of GDP)"
 replace seriesname = "tax_gdp" if seriesname == "Tax revenue (% of GDP)"
-
-* Reshape the data to wide format (swings seriesname variables wide)
-* We want to get seriesname * year as our column names so we want to 
-* flatten out year variables interacted with each series name
 reshape wide yr*, i(countryname) j(seriesname, string)
-
-* Replace the variable names w/ the variable labels
-* Need to do some renaming b/c reshape is picky about how it reads years
-
-* ds will return us an r-class value that we can use in a local macro to loop
-* over each yr variable name. 
 ds, not(type string)
 local renlist = r(varlist)
-
-* Inside the loop below, we are taking the value of the variable
-* label for each yr variable, storing it in a new local variable (x)
-* and then converting that value into a valid variable name, that is stored in y.
-* We then rename each occurence of `v' by the value held in `y'. If we turn the trace on
-* this is all much easier to see (you can also brute force this with repetitive coding).
-
 set tr on 
 foreach v of local renlist {
 	display in yellow "We are on `v' variable now"
