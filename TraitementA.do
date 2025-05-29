@@ -2,12 +2,11 @@
 Ibrahima Tall
 #-------------------------------------------------------------------------------
 */
-
 webuse set "https://github.com/GeoCenter/StataTraining/raw/master/Day2/Data"
 global dataurl "https://github.com/GeoCenter/StataTraining/raw/master/Day2/Data"
 
-*capture log close
-*log using "$pathlog\Day2Homework.log", replace
+capture log close
+log using "$pathlog\Day2Homework.log", replace
 
 /* --- Homweork Exercise --- *
 Import the World Bank Indicator data and discuss how you would reshape it
@@ -16,11 +15,7 @@ Write psuedocode for each modification you'd make to the data.
 import delimited "$dataurl/wb_indicators.csv", clear
 
 * What are these variables?
-* http://data.worldbank.org/indicator/NV.AGR.TOTL.ZS
-* http://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG
-* http://data.worldbank.org/indicator/GC.TAX.TOTL.GD.ZS
-
-*br
+browse
 describe
 * How many instances of missing data do we have to fix?
 count if inlist("..", yr2007, yr2008, yr2013, yr2014)==1
