@@ -27,42 +27,25 @@ set tr on
 foreach v of local renlist {
 	display in yellow "We are on `v' variable now"
 	local x : variable label `v'
-	
 	display in yellow "ensure that the variable label for `x' is a valid name and store it in y"
 	local y = strtoname("`x'")
-	
 	display in white "Now we'll rename `v' to be `y'"
 	rename `v' `y' 
 	display in white "Our variable should now be named `y'"
-	}
-*end loop
+}
 set tr off
-
-* Reshape one more time and things appear to be good
-* This time, we want ag_gdp, gdp_growth and tax_gdp --> year (stacked)
 rename *_yr* **
 reshape long ag_gdp@ gdp_growth@ tax_gdp@, i(countryname) j(year)
-
-*label a few variables and we are ready for merging
 label var ag_gdp "agricultural sector (value added) as % of gdp"
 label var gdp_growth "gdp growth rate"
 label var tax_gdp "taxes collected as % of gdp"
-
-* Plot the resulting data (all in percentages)
 twoway(connected ag_gdp gdp_growth tax_gdp year, sort), by(countryname) scheme(s1color)
-
 table countryname year, c(mean gdp_growth) f(%9.2fc) row col
 encode countryname, gen(country_id)
-
-* Create a unique id for merging with subset FAD data (need to look at this data first!
-* Open a concurrent session and look at the id variable. What pattern do you see?
 sort countryname year
 gen loc_time_id = real( string(country_id) + string(year) )
 isid loc_time_id
-
 saveold "C:\Users\t\Documents\GitHub\StataTraining\Day2\Data\wb_indicators_long.dta", replace
-
-
 /* Extra credit: reshape the data 1 more time to get a "real" tidy dataset.
 * In this case, we want to combine the gdps into a single variable that is 
 * identified by a gdp type variable. First, rename our gdp variables
