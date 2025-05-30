@@ -28,7 +28,6 @@ rename qtr freq
 graph bar (mean) freq, over(quarter) by(agency, style(compact) rows(1)) scheme(s1color)
 graph bar (mean) freq, over(quarter) by(agency, yrescale style(compact) rows(1))
 * ------------------------------------------------- *
-* ### Multiple variables are stored in 1 column ###
 clear all
 input str3 country str5 agency q1FY2009 q2FY2009 q3FY2009 q4FY2009 q1FY2010 q2FY2010 q3FY2010 q4FY2010
 "AFG"	"USAID"	399	361	254	71	378	398	85	39
