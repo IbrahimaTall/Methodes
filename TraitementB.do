@@ -5,11 +5,9 @@ clear
 capture log close
 webuse set "https://github.com/GeoCenter/StataTraining/raw/master/Day2/Data"
 global dataurl "https://github.com/GeoCenter/StataTraining/raw/master/Day2/Data/"
-* Path to be determined based on where users install zip
 capture log close
 log using "$pathlog\MessyDataExamples.log", replace
 cd "$pathdata"
-* ### Column headers are numbers, not names ###
 clear all
 input str19 agency _1st _2nd _3rd _4th
 "DOS"	4	4	4	4
@@ -19,12 +17,9 @@ input str19 agency _1st _2nd _3rd _4th
 "USDA" 1	0	1	0
 end
 saveold "column_numbers.dta", replace version(12)
-* Rename the variables to real names
 rename (_1st _2nd _3rd _4th) (qtr1 qtr2 qtr3 qtr4)
-* Melt the data so that each row is an entry for each agency, by quarter
 reshape long qtr, i(agency) j(quarter)
 rename qtr freq
-* Free axis versus fixed. 
 graph bar (mean) freq, over(quarter) by(agency, style(compact) rows(1)) scheme(s1color)
 graph bar (mean) freq, over(quarter) by(agency, yrescale style(compact) rows(1))
 * ------------------------------------------------- *
@@ -37,11 +32,8 @@ input str3 country str5 agency q1FY2009 q2FY2009 q3FY2009 q4FY2009 q1FY2010 q2FY
 "AZE"	"USAID"	116	239	330	34	92	315	312	220
 end
 saveold "mVars_column.dta", replace version(12)
-* Melt data based on the time variable, country is the unique identifier
 reshape long q@, i(country) j(time, string)
-* Grab the 1st value of each observations in the time variable
 generate qtr = real(substr(time, 1, 1))
-* a numeric when a number is coded as a string. Returns missing if no numbers are found.
 generate year = real(substr(time, 4, 7))
 sort country  year qtr
 order country agency qtr year q
@@ -54,17 +46,12 @@ input str3 country str5 agency q1FY2009 q2FY2009 q3FY2009 q4FY2009 q1FY2010 q2FY
 "ARM"	"USAID"	86	89	127	212	394	255	141	74
 "AZE"	"USAID"	116	239	330	34	92	315	312	220
 end
-* First, reshape based on the year values
 reshape long q1FY@ q2FY@ q3FY@ q4FY@, i(country) j(year)
 sort country year
-* Remove the FY part from each variables
 rename *FY *
-* Reshape again, based on the qtr values
 reshape long q@, i(country year) j(qtr)
 rename q freq 
 * ------------------------------------------------- *
-* ### Variables stored in both rows and columns ### *
-* More complicated example using mutiple reshapes
 clear all
 input str6 stringid	str6 good year2011 year2012
 "Malawi" "coffee"	5.93	2.40
@@ -75,14 +62,8 @@ input str6 stringid	str6 good year2011 year2012
 "Rwanda" "maize"	4.78	6.46
 end
 saveold "vars_row_columns.dta", replace version(12)
-* Goal: Transform data so each good is organized as a panel, by country
-* Country will be the unique identifier, and the suffix of the year variable is 
-* the name of each good.
 reshape wide year*, i(stringid) j(good, string)
-* Why doesn't the following work? 
 cap reshape long year2011coffee year2012coffee year2011maize year2012maize, i(stringid) j(year)
-* Stata is looking for a variable named _gooda#_ _goodb#_
-* What we provided is not sufficient for the function. Let's rename our variables and try again
 rename (year2011coffee year2012coffee year2011maize year2012maize) 
 foreach x of varlist year* {
 	local n1: variable label `x'
@@ -104,25 +85,14 @@ reshape long gdp@ cpc@, i(id) j(year)
 reshape wide
 * ### Reshape Exercise  & Solution ###
 webuse "wb_gdp_wide.dta", clear
-/* How are data messy?
-1) Columns contain variables
-2) Series name is unclear
-*/
-* Make the data tidy by using the reshape command.
 reshape long yr@, i(countryname) j(year)
-* Once reshaped, rename and label key variables. Drop uncessary variables.
 rename (countryname countrycode yr) (country ISO3 gdp)
 drop seriesname seriescode
-* Which country grew the most from 2009-2012
-* Visual answer
 twoway(connected gdp year), by(country) scheme(s1color)
-*Tabular answer
 table country year, c(mean gdp) f(%9.2f) col
-*egen way to create a variable of average growth
 egen gdp_ave = mean(gdp), by(country)
 tab country, sum(gdp_ave)
 * -------------------------------------------------- *
-* ### Merging Examples ###
 clear
 input id age hid
 1 45 101
@@ -197,40 +167,23 @@ label values data_source fisc_type
 count
 clear
 * -------------------------------------------------- *
-* ### Summarizing Data ###
-* Review previous commands introduced to students
 webuse "StataTrainingClean.dta", clear
-* === Summarise ===*
-* - summary stats for all variables
 sum
 sum spent, detail 
-* Conduct operation by each fiscal year
 bysort fiscalyear: sum spent
 bysort fiscalyear: sum spent if inlist("USAID", agency), d
-* === tabulate ===
-* - create one or two-way cross tabs
 tab fiscalyear agency, mi
-* tabulate fiscal year account and summarize spending
 tab fiscalyear, sum(spent) means
 tab fiscalyear, sum(spent)
-* tab + gen to create dummy variables
 tab agency, gen(agency_flag)
-* === tab_chi === *
-* Install tabsort to get sorted two-way tables (ssc install tab_chi)
 tabsort agency, sum(spent) so(mean)
 tab agency, sum(spent)
 tabsort agency fiscalyear
 tabsort category, sum(spent) sort (spent)
-* === tabstat === *
-* - create tabulations with selected statistics
 tabstat spent, by(fiscalyear) stat(mean median sd n)
 tabstat spent, by(agency_flag8) stat(mean median sd n) nototal col(stat)
 tabstat spent, by(agency_flag8) stat(mean median sd n)
-* === table === *
-* Flexible table of summary statistics 
-table fiscalyear qtr if inlist("USAID", agency), /*
-*/ c(mean spent sum spent sd spent) f(%9.2fc) 
-* What's going on with quarterly spending? Is it always higher in the fourth quarter?
+table fiscalyear qtr if inlist("USAID", agency), 
 bysort agency: table fiscalyear qtr, c(sum spent) f(%9.2fc)
 egen tot_spent = total(spent), by(qtr fiscalyear agency fiscalyeartype)
 *twoway(connected tot_spent qtr, sort) if agency == "USAID", by(fiscalyear) scheme(s1color)
