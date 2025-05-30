@@ -41,7 +41,6 @@ saveold "mVars_column.dta", replace version(12)
 reshape long q@, i(country) j(time, string)
 * Grab the 1st value of each observations in the time variable
 generate qtr = real(substr(time, 1, 1))
-* Create a time variable using a similar approach. The real() function returns 
 * a numeric when a number is coded as a string. Returns missing if no numbers are found.
 generate year = real(substr(time, 4, 7))
 sort country  year qtr
