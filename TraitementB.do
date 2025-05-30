@@ -105,12 +105,8 @@ input id gdp2014 gdp2015 cpc2014 cpc2015
 end
 saveold "gdp_cpc.dta", replace version(12)
 clist, noo
-* Looks as if a variable (year) is stored in the name
-* Try to (melt) reshape the data from wide to long 
 reshape long gdp@ cpc@, i(id) j(year)
-* Revert back to original data
 reshape wide
-* ------------------------------------------------- *
 * ### Reshape Exercise  & Solution ###
 webuse "wb_gdp_wide.dta", clear
 /* How are data messy?
