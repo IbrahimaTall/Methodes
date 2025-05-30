@@ -83,20 +83,15 @@ reshape wide year*, i(stringid) j(good, string)
 cap reshape long year2011coffee year2012coffee year2011maize year2012maize, i(stringid) j(year)
 * Stata is looking for a variable named _gooda#_ _goodb#_
 * What we provided is not sufficient for the function. Let's rename our variables and try again
-rename (year2011coffee year2012coffee year2011maize year2012maize) /*
-*/ (coffee2011 coffee2012 maize2011 maize2012)
-/* If you have numerous variables a general solution maybe more appropriate, such as:
+rename (year2011coffee year2012coffee year2011maize year2012maize) 
 foreach x of varlist year* {
 	local n1: variable label `x'
 	local n2 = strtoname("`n1'")
 	rename `x' `n2'
-	}
-*end
+}
 rename *_year* **
-*/
 reshape long coffee@ maize@, i(stringid) j(year)
 list, clean noo
-* ------------------------------------------------- *
 * ### Reshape examples ###
 clear
 input id gdp2014 gdp2015 cpc2014 cpc2015
