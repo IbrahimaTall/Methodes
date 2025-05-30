@@ -305,7 +305,6 @@ if inlist(agency, "USAID") & inrange(fiscalyear, 2010, 2013), by(fiscalyear, not
 legend(order(1 "Obligations" 2 "Disbursements") nobox region(fcolor(none) lcolor(none)) ///
  size(tiny) span) subtitle(, size(vsmall)) ///
 `labopts' `layout' scheme(s1mono) `gopts'
-* -------------------------------------------------- *
 * === Estout ===*
 cls
 webuse "StataTrainingClean.dta", clear
