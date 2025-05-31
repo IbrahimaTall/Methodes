@@ -55,11 +55,9 @@ twoway qfitci mpg weight, fintensity(inten30) alwidth(none) || scatter mpg weigh
 *---------- lpoly
 twoway scatter mpg weight || lpoly  mpg weight, kernel(cosine)
 twoway lpolyci mpg weight, fintensity(inten30) alwidth(none) || scatter mpg weight
-
-// fpfit
+*---------- fpfit
 twoway scatter mpg weight || fpfit  mpg weight
 twoway fpfitci mpg weight, fintensity(inten30) alwidth(none)|| scatter mpg weight
-
-// mband
+*---------- mband
 twoway scatter mpg weight || mband mpg weight
 twoway scatter mpg weight || mspline mpg weight
