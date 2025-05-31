@@ -38,28 +38,21 @@ sysuse nlswide1, clear
 twoway pcspike wage68 ttl_exp68 wage88 ttl_exp88
 twoway pccapsym wage68 ttl_exp68 wage88 ttl_exp88
 sysuse auto, clear
-
-// contour
+*---------- contour
 twoway contour mpg price weight, level(20) crule(intensity) ecolor(blue)
-
-// --- fitting ----
+*---------- fitting ----
 collapse (mean) mpg (sd) sdMPG = mpg, by(foreign)
 serrbar mpg sdMPG foreign
-
 sysuse auto, clear
-
-// lowess
+*---------- lowess
 twoway scatter mpg weight || lowess  mpg weight
-
-// lfit
+*---------- lfit
 twoway scatter mpg weight || lfit  mpg weight, range(40 .)
 twoway lfitci mpg weight, fintensity(inten30) alwidth(none) || scatter mpg weight
-
-// qfit
+*---------- qfit
 twoway scatter mpg weight || qfit  mpg weight
 twoway qfitci mpg weight, fintensity(inten30) alwidth(none) || scatter mpg weight
-
-// lpoly
+*---------- lpoly
 twoway scatter mpg weight || lpoly  mpg weight, kernel(cosine)
 twoway lpolyci mpg weight, fintensity(inten30) alwidth(none) || scatter mpg weight
 
