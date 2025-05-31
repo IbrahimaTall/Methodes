@@ -240,8 +240,7 @@ twoway(connected spent qtr if fiscalyeartype == "Disbursements", sort `lineopt2'
 (connected spent qtr if fiscalyeartype == "Obligations", sort `lineopt1') ///
 if inlist(agency, "USAID") & inrange(fiscalyear, 2010, 2013), by(fiscalyear, note("")) ///
 legend(order(1 "Obligations" 2 "Disbursements") nobox region(fcolor(none) lcolor(none)) ///
- size(tiny) span) subtitle(, size(vsmall)) ///
-`labopts' `layout' scheme(s1mono) `gopts'
+ size(tiny) span) subtitle(, size(vsmall)) `labopts' `layout' scheme(s1mono) `gopts'
 * === Estout ===*
 cls
 webuse "StataTrainingClean.dta", clear
@@ -253,8 +252,7 @@ esttab . using "disbursement_means1.txt", cells("mean p50 sd min max count") noo
 * Fix formatting and rewrite, saving over existing text file
 local fmt1 "mean (fmt(%12.2fc)) p50(fmt(%12.2fc)) sd(fmt(%12.2fc))"
 local fmt2 "min(fmt(%12.0fc)) max(fmt(%12.0fc)) count(fmt(%12.0fc))"
-esttab . using "disbursement_means2.txt", cells("`fmt1' `fmt2'") ///
-	noobs replace nomtitles nonum
+esttab . using "disbursement_means2.txt", cells("`fmt1' `fmt2'") noobs replace nomtitles nonum
 * -------------------------------------------------- *
 * === Estout Exercise === *
 cls
