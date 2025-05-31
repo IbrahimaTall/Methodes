@@ -19,31 +19,23 @@ graph matrix price mpg weight
 scatter mpg price
 *--------- Line/connected
 twoway connected mpg price, sort(price) msymbol(x)
-
 twoway line mpg price, sort(price) lpattern(longdash_dot)
-
-// area
+*--------- area
 twoway area mpg price, sort(price) cmissing(yes)
-
-// gap b/w
+*--------- gap b/w
 twoway rarea length headroom price
 twoway rbar length headroom price
 twoway rcap length headroom price
 twoway rcapsym length headroom price
-
-// bar
+*--------- bar
 twoway bar price rep78
-
-// dot
+*--------- dot
 twoway dot mpg rep78, ndots(5)
-
-// dropline
+*--------- dropline
 twoway dropline mpg price in 1/5, vert
-
-
-// pcspike
+*--------- pcspike
 sysuse nlswide1, clear
- twoway pcspike wage68 ttl_exp68 wage88 ttl_exp88
+twoway pcspike wage68 ttl_exp68 wage88 ttl_exp88
 twoway pccapsym wage68 ttl_exp68 wage88 ttl_exp88
 sysuse auto, clear
 
