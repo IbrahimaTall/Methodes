@@ -11,11 +11,9 @@ graph hbox mpg, over(rep78, descending) by(foreign) missing
 vioplot price, over(foreign) 
 *--------- histogram
 histogram mpg, width(5) frequency kdensity kdenopts(bwidth(5))
-
-// KDE
+*--------- KDE
 kdensity mpg, width(3)
-
-// Matrix
+*--------- Matrix
 gr matrix price mpg weight
 
 // Lowess
