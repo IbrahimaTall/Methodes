@@ -15,15 +15,9 @@ histogram mpg, width(5) frequency kdensity kdenopts(bwidth(5))
 kdensity mpg, width(3)
 *--------- Matrix
 graph matrix price mpg weight
-*--------- Lowess
-
-
-
-// --- twoway -----------------------------------------------------------------
-// Scatter
+*--------- Scatter
 scatter mpg price
-
-// Line/connected
+*--------- Line/connected
 twoway connected mpg price, sort(price) msymbol(x)
 
 twoway line mpg price, sort(price) lpattern(longdash_dot)
