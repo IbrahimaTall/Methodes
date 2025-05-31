@@ -186,12 +186,11 @@ tabstat spent, by(agency_flag8) stat(mean median sd n)
 table fiscalyear qtr if inlist("USAID", agency), 
 bysort agency: table fiscalyear qtr, c(sum spent) f(%9.2fc)
 egen tot_spent = total(spent), by(qtr fiscalyear agency fiscalyeartype)
-*twoway(connected tot_spent qtr, sort) if agency == "USAID", by(fiscalyear) scheme(s1color)
+twoway(connected tot_spent qtr, sort) if agency == "USAID", by(fiscalyear) scheme(s1color)
 twoway(connected tot_spent qtr if agency == "USAID" & fiscalyeartype == "Obligations", sort)/*
 */ (connected tot_spent qtr if agency == "USAID" & fiscalyeartype == "Disbursements", sort) /*
 */, by(fiscalyear) scheme(s1color) legend(order(1 "Obligations" 2 "Disbursements"))
-table agency fiscalyear, /*
-*/ c(mean spent count spent) f(%9.2fc) row col
+table agency fiscalyear, c(mean spent count spent) f(%9.2fc) row col
 * -------------------------------------------------- *
 * ### Collapsing ###
 webuse "StataTrainingClean.dta", clear 
