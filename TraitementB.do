@@ -199,8 +199,7 @@ order agency fiscalyear category spent
 * Task: Create table showing aggregate category spending for each agency by year
 bys fiscalyear: table agency category, c(sum spent count spent mean spent) f(%12.2fc)
 * Hard to do, let's try to collapse the data
-collapse (sum) spent (count) count = spent (mean) ave_spent = spent /*
-*/, by(agency category fiscalyear)
+collapse (sum) spent (count) count = spent (mean) ave_spent = spent, by(agency category fiscalyear)
 label variable spent "Total disbursements (M USD)"
 format spent %9.0f
 * Can you plot or summarize aggregate spending now?
@@ -208,11 +207,9 @@ local labopts "ylabel(, labsize(small) angle(horizontal)) xlabel(, labsize(vsmal
 local layout "by(category, rows(2)) subtitle(, size(tiny) fcolor("245 245 245") bexpand)"
 local lineopt "lcolor("102 194 165") mcolor("102 194 165") mlcolor("white") msize(medium) ylabel(, nogrid)"
 local gopts "graphregion(fcolor(none) ifcolor(none))"
-twoway(connected spent fiscalyear, `lineopt' )/*
-*/if agency == "USAID", by(category,  note("")) yscale(noline) `labopts' `layout' scheme(s1mono) `gopts'
+twoway(connected spent fiscalyear, `lineopt' ) if agency == "USAID", by(category,  note("")) ///
+ yscale(noline) `labopts' `layout' scheme(s1mono) `gopts'
 * --------------------------------------------
-* === Collapsing Solution === *
-* Load data
 webuse "StataTrainingClean.dta", clear
 * Keep only observations from agency == USAID
 keep if inlist(agency, "USAID") & fiscalyeartype == "Disbursements"
