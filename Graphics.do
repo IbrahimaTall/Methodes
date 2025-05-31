@@ -14,9 +14,8 @@ histogram mpg, width(5) frequency kdensity kdenopts(bwidth(5))
 *--------- KDE
 kdensity mpg, width(3)
 *--------- Matrix
-gr matrix price mpg weight
-
-// Lowess
+graph matrix price mpg weight
+*--------- Lowess
 
 
 
