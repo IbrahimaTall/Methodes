@@ -10,3 +10,6 @@
 ##	6. Cartographie des résultats                                       ####
 ##	7. Considérant la base de recensement comme un sondage              ####
 ##############################################################################*/
+
+cd "C:/Users/IBRAHIMA TALL/Documents/PERSONNAL/Pauvrete/SAE TALL"
+clear
