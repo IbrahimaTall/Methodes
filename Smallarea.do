@@ -13,3 +13,9 @@
 
 cd "C:/Users/IBRAHIMA TALL/Documents/PERSONNAL/Pauvrete/SAE TALL"
 clear
+
+*-------------------------------------------------------------------------------
+*------------- 1. Préparation de la base de l'EHCVM ----------------------------
+*-------------------------------------------------------------------------------
+* Chargement de la base individus
+use ehcvm_individu_SEN2018, clear
