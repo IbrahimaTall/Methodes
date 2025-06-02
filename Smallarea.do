@@ -88,3 +88,5 @@ replace departement = 10 * region + departement if departement < 10
 generate menid = (1000 + departement) * 10000 + _n, before(region) 
 format menid %8.0f
 
+* Le code du département : 1rrD
+generate depid = 1000 + departement, after(menid) 
