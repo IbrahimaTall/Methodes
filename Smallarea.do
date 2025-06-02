@@ -33,3 +33,8 @@ merge 1:1 hhid using ehcvm_welfare_SEN2018, nogenerate nolabel ///
 * Fusion avec la base menage portant sur l'analyse de la Pauvreté
 merge 1:1 hhid using ehcvm_menage_SEN2018, nogenerate nolabel ///
  keepusing(logem mur toit sol toilet elec_ac cuisin tv frigo ordin fer car)
+
+* Définition de la Variable indiquant la pauvreté
+label define pauv 0 "Non Pauvre" 1 Pauvre
+generate pauv:pauv = pcexp < zref
+label variable pauv "Indicatrice de pauvreté"
