@@ -54,3 +54,6 @@ generate menid = (1000 + departement) * 10000 + _n, after(hhid)
 format menid %8.0f
 generate depid = 1000 + departement, after(menid)
 
+* Déclaration du plan de sondage de l'EHCVM
+svyset grappe, strata(milieu) fpc(ndr) || _n [pw = poids], fpc(pop)
+
