@@ -49,3 +49,8 @@ quietly {
     generate ndr = $ndr
 }
 
+* Le code : 1rrDdmmmm
+generate menid = (1000 + departement) * 10000 + _n, after(hhid)
+format menid %8.0f
+generate depid = 1000 + departement, after(menid)
+
