@@ -38,3 +38,14 @@ merge 1:1 hhid using ehcvm_menage_SEN2018, nogenerate nolabel ///
 label define pauv 0 "Non Pauvre" 1 Pauvre
 generate pauv:pauv = pcexp < zref
 label variable pauv "Indicatrice de pauvreté"
+
+* Calcul du poids des individus et total population
+global ndr = 17164 // Nombre total de DR
+quietly {
+    generate poids = hhweight * hhsize
+    total poids
+    global TOT = r(table)[1,1]
+    generate pop = $TOT
+    generate ndr = $ndr
+}
+
