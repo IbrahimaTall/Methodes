@@ -19,3 +19,9 @@ clear
 *-------------------------------------------------------------------------------
 * Chargement de la base individus
 use ehcvm_individu_SEN2018, clear
+
+* Prise en compte du département
+quietly {
+    keep hhid region departement milieu
+    duplicates drop hhid, force
+}
