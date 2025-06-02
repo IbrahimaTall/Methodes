@@ -79,3 +79,8 @@ quietly{
     generate cuisin = inlist(E12, 3, 4)
 }
 
+* Identification des départements et des ménages
+keep region departement logem mur toit sol toilet elec_ac cuisin tv ///
+ frigo ordin fer car
+replace departement = 10 * region + departement if departement < 10
+
