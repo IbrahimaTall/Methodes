@@ -25,3 +25,7 @@ quietly {
     keep hhid region departement milieu
     duplicates drop hhid, force
 }
+
+* Fusion avec la base welfare portant sur l'analyse de la Pauvreté
+merge 1:1 hhid using ehcvm_welfare_SEN2018, nogenerate nolabel ///
+ keepusing(grappe hhweight hhsize zref pcexp)
