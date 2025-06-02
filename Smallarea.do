@@ -69,3 +69,13 @@ import spss using "spss_habitat_10eme_dr v2.sav", clear
 rename (A01 A02 E13_2 E13_4 E13_12 E13_16 E14_1)(region departement tv ///
  frigo ordin fer car)
 
+quietly{
+    recode E03 (1 2 = 1)(3 4 5 = 2)(6 7 8 = 3), generate(logem)
+    generate mur = E05 > 5
+    generate toit = inlist(E06, 1,2,3)
+    generate sol = inlist(E07, 1,2,5,6,7)
+    generate toilet = E08 < 22
+    generate elec_ac = E11 == 1
+    generate cuisin = inlist(E12, 3, 4)
+}
+
