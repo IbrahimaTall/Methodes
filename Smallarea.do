@@ -60,3 +60,12 @@ svyset grappe, strata(milieu) fpc(ndr) || _n [pw = poids], fpc(pop)
 * Données d'enquête EHCVM 2018
 save mysurvey, replace
 
+*-------------------------------------------------------------------------------
+*------------- 2. Préparation de la base du recensement ------------------------
+*-------------------------------------------------------------------------------
+* Importation de la base RGPHAE 2013 (partie Habitat)
+import spss using "spss_habitat_10eme_dr v2.sav", clear
+* Identification des variables explicatives
+rename (A01 A02 E13_2 E13_4 E13_12 E13_16 E14_1)(region departement tv ///
+ frigo ordin fer car)
+
