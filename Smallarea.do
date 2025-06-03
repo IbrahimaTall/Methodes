@@ -96,3 +96,14 @@ svyset grappe, strata(milieu) fpc(ndr) || _n [pw = poids], fpc(pop)
 
 * Données d'enquête EHCVM 2018
 save mysurvey, replace
+
+* Total par département dans la base EHCVM
+quietly {
+    generate un = 1
+    collect clear
+    collect create deptabEHCVM
+    collect: svy: total un, over(departement)
+    collect style cell, nformat(%5.2f)
+    collect style showbase off
+    collect layout (colname) (result)
+}
