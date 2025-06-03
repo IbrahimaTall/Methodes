@@ -157,7 +157,10 @@ quietly {
 	 sheet(data) cell(R1) noopen modify
 }
 
-* Taille ajustée comme poids en fonctions des totaux 
+/* 
+Taille ajustée à partir des totaux ci-haut pour avoir la population toale
+dans la base du recensement
+*/
 quietly {
     generate hhsize = 54.9942667918747 if departement == 11
     replace hhsize = 103.187849774122 if departement == 12
