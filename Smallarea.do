@@ -107,3 +107,9 @@ quietly {
     collect style showbase off
     collect layout (colname) (result)
 }
+
+*-------------------------------------------------------------------------------
+*------------- 2. Préparation de la base du recensement ------------------------
+*-------------------------------------------------------------------------------
+* Importation de la base RGPHAE 2013 (partie Habitat)
+import spss using "spss_habitat_10eme_dr v2.sav", clear
