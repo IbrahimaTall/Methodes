@@ -140,3 +140,19 @@ format menid %8.0f
 
 * Le code du département : 1rrD
 generate depid = 1000 + departement, after(menid) 
+
+quietly {
+    * Total par département dans le recensement
+    gen un = 1
+    capture collect drop deptableRGPH
+    collect create deptableRGPH
+    collect: total un, over(departement)
+    * Sauvegarde pour les taux par département
+    collect style cell, nformat(%5.2f)
+    collect style showbase off
+    collect layout (colname) (result)
+    collect export tabledep.xlsx, name(deptabEHCVM) ///
+	 sheet(data, replace) cell(A1) noopen replace
+    collect export tabledep.xlsx, name(deptableRGPH) ///
+	 sheet(data) cell(R1) noopen modify
+}
