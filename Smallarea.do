@@ -156,3 +156,55 @@ quietly {
     collect export tabledep.xlsx, name(deptableRGPH) ///
 	 sheet(data) cell(R1) noopen modify
 }
+
+* Taille ajustée comme poids en fonctions des totaux 
+quietly {
+    generate hhsize = 54.9942667918747 if departement == 11
+    replace hhsize = 103.187849774122 if departement == 12
+    replace hhsize = 128.630119195873 if departement == 13
+    replace hhsize = 76.2447266569908 if departement == 14
+    replace hhsize = 106.83469526728 if departement == 21
+    replace hhsize = 30.5789587852495 if departement == 22
+    replace hhsize = 101.258156260216 if departement == 23
+    replace hhsize = 118.665685868214 if departement == 31
+    replace hhsize = 152.23106918239 if departement == 32
+    replace hhsize = 120.384178976665 if departement == 33
+    replace hhsize = 110.785114777618 if departement == 41
+    replace hhsize = 102.559646910467 if departement == 42
+    replace hhsize = 100.49852675887 if departement == 43
+    replace hhsize = 192.932699619772 if departement == 51
+    replace hhsize = 118.765745501285 if departement == 52
+    replace hhsize = 111.993256880734 if departement == 53
+    replace hhsize = 125.359247397918 if departement == 54
+    replace hhsize = 120.426728586171 if departement == 61
+    replace hhsize = 154.901992882562 if departement == 62
+    replace hhsize = 116.724681684623 if departement == 63
+    replace hhsize = 112.551715550636 if departement == 71
+    replace hhsize = 113.914192546584 if departement == 72
+    replace hhsize = 132.452371442836 if departement == 73
+    replace hhsize = 127.189338089576 if departement == 81
+    replace hhsize = 115.465793304221 if departement == 82
+    replace hhsize = 105.674993053626 if departement == 83
+    replace hhsize = 135.596266184884 if departement == 91
+    replace hhsize = 122.68607907743 if departement == 92
+    replace hhsize = 123.855120828539 if departement == 93
+    replace hhsize = 145.121541010771 if departement == 101
+    replace hhsize = 102.14512195122 if departement == 102
+    replace hhsize = 120.978630136986 if departement == 103
+    replace hhsize = 144.749469964664 if departement == 111
+    replace hhsize = 160.489064261556 if departement == 112
+    replace hhsize = 61.9497663551402 if departement == 113
+    replace hhsize = 163.079672501412 if departement == 121
+    replace hhsize = 149.023888888889 if departement == 122
+    replace hhsize = 122.576704169424 if departement == 123
+    replace hhsize = 104.536477987421 if departement == 124
+    replace hhsize = 110.052674066599 if departement == 131
+    replace hhsize = 64.4136774193548 if departement == 132
+    replace hhsize = 114.314135667396 if departement == 133
+    replace hhsize = 132.708393866021 if departement == 141
+    replace hhsize = 170.319464720195 if departement == 142
+    replace hhsize = 136.392431561997 if departement == 143
+    
+    replace hhsize = floor(hhsize + 0.5)
+    save rgphae.dta, replace
+}
