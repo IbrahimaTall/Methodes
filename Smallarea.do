@@ -133,3 +133,7 @@ quietly{
 keep region departement logem mur toit sol toilet elec_ac cuisin tv ///
  frigo ordin fer car
 replace departement = 10 * region + departement if departement < 10
+
+* Le code du ménage : 1rrDmmmm
+generate menid = (1000 + departement) * 10000 + _n, before(region) 
+format menid %8.0f
