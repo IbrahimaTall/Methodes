@@ -90,3 +90,6 @@ format menid %8.0f
 
 * Le code du département : 1rrD
 generate depid = 1000 + departement, after(menid) 
+
+* Déclaration du plan de sondage de l'EHCVM
+svyset grappe, strata(milieu) fpc(ndr) || _n [pw = poids], fpc(pop)
