@@ -228,3 +228,10 @@ replace origine = 2 if missing(origine)
 
 * Les variables du modèles
 global hhmodel sol elec_ac toilet fer frigo cuisin ordin car
+
+/* Test d'égalité de distributions:
+	distributions égales pour sol, elec_ac et fer */
+foreach v of varlist $hhmodel {
+    ksmirnov `v', by(origine)
+}
+
