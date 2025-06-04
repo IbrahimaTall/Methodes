@@ -211,3 +211,10 @@ quietly {
     replace hhsize = floor(hhsize + 0.5)
     save rgphae.dta, replace
 }
+
+*-------------------------------------------------------------------------------
+*------------- 3. Test d'égalité de distribution des variables explicatives ----
+*-------------------------------------------------------------------------------
+* Regroupement des deux pour observer les distributions
+use mysurvey.dta, clear
+
