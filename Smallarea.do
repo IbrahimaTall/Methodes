@@ -244,3 +244,6 @@ use mysurvey, clear
 * Taux de pauvreté national: taux national = 37,8% avec CV = 3,6% < 20,0%
 svy: mean pauv, noheader cformat(%9.4f)
 estat cv
+
+* Evaluation du taux de pauvreté par région 
+svy: mean pauv, over(region) noheader cformat(%9.4f)
