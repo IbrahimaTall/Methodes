@@ -250,3 +250,6 @@ svy: mean pauv, over(region) noheader cformat(%9.4f)
 
 * Calcul des coéfficients de variation
 estat cv
+
+* Indicateurs de pauvreté: incidence, profondeur et sévérité
+ssc install povdeco // pour installer l'ado povdeco
