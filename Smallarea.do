@@ -235,3 +235,8 @@ foreach v of varlist $hhmodel {
     ksmirnov `v', by(origine)
 }
 
+*-------------------------------------------------------------------------------
+*------------- 4. Calcul de la pauvreté au sens de l'EHCVM ---------------------
+*-------------------------------------------------------------------------------
+* Base d'enquêtes pour les estimations directes
+use mysurvey, clear
