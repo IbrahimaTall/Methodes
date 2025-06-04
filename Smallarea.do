@@ -240,3 +240,7 @@ foreach v of varlist $hhmodel {
 *-------------------------------------------------------------------------------
 * Base d'enquêtes pour les estimations directes
 use mysurvey, clear
+
+* Taux de pauvreté national: taux national = 37,8% avec CV = 3,6% < 20,0%
+svy: mean pauv, noheader cformat(%9.4f)
+estat cv
