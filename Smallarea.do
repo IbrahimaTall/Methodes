@@ -253,3 +253,6 @@ estat cv
 
 * Indicateurs de pauvreté: incidence, profondeur et sévérité
 ssc install povdeco // pour installer l'ado povdeco
+
+* Poids en entier
+generate fpoids = ceil(poids+0.5)
