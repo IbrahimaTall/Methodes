@@ -218,7 +218,10 @@ quietly {
 * Regroupement des deux pour observer les distributions
 use mysurvey.dta, clear
 
-* Pour supperposer les deux bases
+* Identifiant pour supperposer les deux bases
 label define origine 1 EHCVM 2 RGPHAE
 gen origine:origine = 1
 
+* Supperposition des deux bases
+append using rgphae.dta
+replace origine = 2 if missing(origine)
