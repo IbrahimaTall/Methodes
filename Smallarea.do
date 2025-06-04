@@ -225,3 +225,6 @@ gen origine:origine = 1
 * Supperposition des deux bases
 append using rgphae.dta
 replace origine = 2 if missing(origine)
+
+* Les variables du modèles
+global hhmodel sol elec_ac toilet fer frigo cuisin ordin car
