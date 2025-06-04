@@ -247,3 +247,6 @@ estat cv
 
 * Evaluation du taux de pauvreté par région 
 svy: mean pauv, over(region) noheader cformat(%9.4f)
+
+* Calcul des coéfficients de variation
+estat cv
