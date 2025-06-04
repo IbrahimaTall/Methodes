@@ -220,3 +220,5 @@ use mysurvey.dta, clear
 
 * Pour supperposer les deux bases
 label define origine 1 EHCVM 2 RGPHAE
+gen origine:origine = 1
+
