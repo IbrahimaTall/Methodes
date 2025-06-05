@@ -271,3 +271,6 @@ estat cv
 * Installation de l'ado sae (se connecter à internet)
 ssc install sae
 clear
+
+* Compression de la base du recensement (pas besoin d'importer en memoire)
+capture erase rgphae_mata
