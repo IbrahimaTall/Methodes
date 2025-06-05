@@ -304,3 +304,5 @@ sae sim h3 pcexp $hhmodel [aw=poids], area(region) mcrep(100) bsrep(200) ///
 label define region 1 dakar 2 ziguinchor 3 diourbel 4 "saint louis" ///
  5 tambacounda 6 kaolack 7 thies 8 louga 9 fatick 10 kolda ///
  11 matam 12 kaffrine 13 kedougou 14 sedhiou 0 "National"
+
+label values Unit region
