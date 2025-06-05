@@ -259,3 +259,8 @@ generate fpoids = ceil(poids+0.5)
 
 * povdeco pcexp [fweight = fpoids], pline(333440.5) bygroup(region) summarize
 povdeco pcexp [fweight = fpoids], varpline(zref) bygroup(region) summarize
+
+* Taux par départements des régions n° 1, 7, 11 et 13
+quietly svy, subpop(if inlist(region,1 ,7, 11, 13)): mean pauv, ///
+ over(departement) noheader cformat(%9.4f)
+estat cv
