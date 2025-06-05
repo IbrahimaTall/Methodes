@@ -285,3 +285,7 @@ sae model h3 pcexp $hhmodel [aw=poids], area(depid) alfatest(residus)
 predict residual, stdp
 pnorm residual // P-P plot
 graph export graphics.png, as(png) replace
+
+* Diagnostic du model: Test de normalité de Kolmogorov
+quietly summarize residual
+ksmirnov residual = normal((residual-r(mean))/r(sd))
