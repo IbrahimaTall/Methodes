@@ -299,3 +299,8 @@ sae sim h3 pcexp $hhmodel [aw=poids], area(region) mcrep(100) bsrep(200) ///
  lnskew matin("rgphae_mata") seed(648743) pwcensus(hhsize) ///
  indicators(fgt0 fgt1 fgt2) aggids(0 4) uniqid(menid) plines(333440.5) ///
  ydump("reg_ind") addvars(region departement)
+
+* Labels des Régions
+label define region 1 dakar 2 ziguinchor 3 diourbel 4 "saint louis" ///
+ 5 tambacounda 6 kaolack 7 thies 8 louga 9 fatick 10 kolda ///
+ 11 matam 12 kaffrine 13 kedougou 14 sedhiou 0 "National"
