@@ -264,3 +264,10 @@ povdeco pcexp [fweight = fpoids], varpline(zref) bygroup(region) summarize
 quietly svy, subpop(if inlist(region,1 ,7, 11, 13)): mean pauv, ///
  over(departement) noheader cformat(%9.4f)
 estat cv
+
+*-------------------------------------------------------------------------------
+*------------- 5. Estimation de la pauvreté avec sae ---------------------------
+*-------------------------------------------------------------------------------
+* Installation de l'ado sae (se connecter à internet)
+ssc install sae
+clear
