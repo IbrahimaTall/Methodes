@@ -274,3 +274,5 @@ clear
 
 * Compression de la base du recensement (pas besoin d'importer en memoire)
 capture erase rgphae_mata
+sae data import, datain("rgphae.dta") area(depid) uniqid(menid) ///
+ varlist($hhmodel $valpha region departement hhsize) dataout("rgphae_mata")
