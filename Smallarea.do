@@ -280,3 +280,8 @@ sae data import, datain("rgphae.dta") area(depid) uniqid(menid) ///
 * Implementation du modèle
 use mysurvey, clear
 sae model h3 pcexp $hhmodel [aw=poids], area(depid) alfatest(residus)
+
+* Diagnostic du model: Calcul du residus
+predict residual, stdp
+pnorm residual // P-P plot
+graph export graphics.png, as(png) replace
