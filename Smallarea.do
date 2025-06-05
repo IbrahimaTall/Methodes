@@ -292,3 +292,10 @@ ksmirnov residual = normal((residual-r(mean))/r(sd))
 
 * Diagnostic du model: Test du skewness
 sktest residual
+
+* Pauvreté par région avec sae pour retrouver ceux de l'EHCVM
+capture erase reg_ind.dta
+sae sim h3 pcexp $hhmodel [aw=poids], area(region) mcrep(100) bsrep(200) ///
+ lnskew matin("rgphae_mata") seed(648743) pwcensus(hhsize) ///
+ indicators(fgt0 fgt1 fgt2) aggids(0 4) uniqid(menid) plines(333440.5) ///
+ ydump("reg_ind") addvars(region departement)
