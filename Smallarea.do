@@ -289,3 +289,6 @@ graph export graphics.png, as(png) replace
 * Diagnostic du model: Test de normalité de Kolmogorov
 quietly summarize residual
 ksmirnov residual = normal((residual-r(mean))/r(sd))
+
+* Diagnostic du model: Test du skewness
+sktest residual
