@@ -1,5 +1,4 @@
  /*
-apply variable names and labels
 ******Part C - Merge and Save
 Merge meta data onto appended dataset
 Save as .dta file	
