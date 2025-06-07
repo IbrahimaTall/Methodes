@@ -1,5 +1,4 @@
  /*
-Append all WDI .dta files together
 Rename years
 Reshape twice
 apply variable names and labels
