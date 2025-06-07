@@ -1,5 +1,4 @@
  /* 
-Review one WDI excel file
 Import files via a loop
 Import country meta data
 ******Part B - Append, Reshape and Clean
