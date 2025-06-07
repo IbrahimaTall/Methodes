@@ -1,5 +1,4 @@
  /*
-Merge meta data onto appended dataset
 Save as .dta file	
 ******Part D - Analysis
  Answer questions for analysis
