@@ -1,5 +1,4 @@
  /*
-******Part B - Append, Reshape and Clean
 Append all WDI .dta files together
 Rename years
 Reshape twice
