@@ -310,3 +310,4 @@ label values Unit region
 rename avg_fgt?* fgt?
 rename mse_avg_fgt?* mse_fgt?
 gen cv = sqrt(mse_Mean)/Mean
+save pauv_reg.dta, replace
