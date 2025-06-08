@@ -314,3 +314,6 @@ save pauv_reg.dta, replace
 
 * Affichage des taux: les valeurs sont conformes aux IC de l'EHCVM
 list Unit fgt0 cv, separator(0)
+
+* Estimation de la pauvreté départementale avec sae
+use mysurvey, clear
