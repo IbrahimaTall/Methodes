@@ -317,3 +317,5 @@ list Unit fgt0 cv, separator(0)
 
 * Estimation de la pauvreté départementale avec sae
 use mysurvey, clear
+
+capture erase dep_ind.dta
