@@ -309,3 +309,4 @@ label values Unit region
 * Calcul des CV
 rename avg_fgt?* fgt?
 rename mse_avg_fgt?* mse_fgt?
+gen cv = sqrt(mse_Mean)/Mean
