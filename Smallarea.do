@@ -346,3 +346,9 @@ quietly {
     label define ldep 1141 SEDHIOU 0 "Sénégal", add
     label value Unit ldep
 }
+
+* Calcul des CV
+rename avg_fgt?* fgt?
+rename mse_avg_fgt?* mse_fgt?
+gen cv = sqrt(mse_Mean)/Mean
+save pauv_dep.dta, replace
