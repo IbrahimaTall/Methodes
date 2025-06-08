@@ -338,8 +338,8 @@ quietly {
     label define ldep 1122 BIRKILANE 1123 KOUNGHEUL, add
     label define ldep 1131 KEDOUGOU 1132 SALEMATA 1133 SARAYA, add
     label define ldep 1142 BOUNKILING 1143 GOUDOMP 1032 DIOURBEL, add
-	label define ldep 1014 GUEDIAWAYE 1031 BAMBEY, add
-	label define ldep 1043 "SAINT LOUIS" 1054 KOUMPENTOUM, add
+    label define ldep 1014 GUEDIAWAYE 1031 BAMBEY, add
+    label define ldep 1043 "SAINT LOUIS" 1054 KOUMPENTOUM, add
 	label define ldep 1063 GUINGUINEO 1082 LINGUERE, add
 	label define ldep 1092 FOUNDIOUGNE 1103 "MEDINA YORO FOULAH", add
 	label define ldep 1113 "RANEROU FERLO" 1124 "MALEM HODAR", add
