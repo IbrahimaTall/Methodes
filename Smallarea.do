@@ -323,3 +323,26 @@ sae sim h3 pcexp $hhmodel [aw=poids], area(depid) mcrep(100) bsrep(200) ///
  lnskew matin("rgphae_mata") seed(648743) pwcensus(hhsize) ///
  indicators(fgt0 fgt1 fgt2) aggids(0 4) uniqid(menid) plines(333440.5) ///
  ydump("dep_ind") addvars(region departement)
+
+* Labélisation des départements
+quietly {
+    label define ldep 1011 DAKAR 1012 PIKINE 1013 RUFISQUE, replace
+    label define ldep 1021 BIGNONA 1022 OUSSOUYE 1023 ZIGUINCHOR, add
+    label define ldep 1033 MBACKE 1041 DAGANA 1042 PODOR, add
+    label define ldep 1051 BAKEL 1052 TAMBACOUNDA 1053 GOUDIRY, add
+    label define ldep 1061 KAOLACK 1062 "NIORO DU RIP" 1071 MBOUR, add
+    label define ldep 1072 THIES 1073 TIVAOUANE 1081 KEBEMER, add
+    label define ldep 1083 LOUGA 1091 FATICK 1093 GOSSAS, add
+    label define ldep 1101 KOLDA 1102 VELINGARA, add
+    label define ldep 1111 MATAM 1112 KANEL 1121 KAFFRINE, add
+    label define ldep 1122 BIRKILANE 1123 KOUNGHEUL, add
+    label define ldep 1131 KEDOUGOU 1132 SALEMATA 1133 SARAYA, add
+    label define ldep 1142 BOUNKILING 1143 GOUDOMP 1032 DIOURBEL, add
+	label define ldep 1014 GUEDIAWAYE 1031 BAMBEY, add
+	label define ldep 1043 "SAINT LOUIS" 1054 KOUMPENTOUM, add
+	label define ldep 1063 GUINGUINEO 1082 LINGUERE, add
+	label define ldep 1092 FOUNDIOUGNE 1103 "MEDINA YORO FOULAH", add
+	label define ldep 1113 "RANEROU FERLO" 1124 "MALEM HODAR", add
+	label define ldep 1141 SEDHIOU 0 "Sénégal", add
+    label value Unit ldep
+}
