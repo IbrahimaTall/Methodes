@@ -368,3 +368,6 @@ drop if !Unit
 
 * Mettre la pauv_dep.dta base dans le frame depart
 frame rename default depart
+
+* Créer un frame maps pour les données spatiales
+frame create maps
