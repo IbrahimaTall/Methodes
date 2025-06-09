@@ -379,3 +379,6 @@ use Maps/base_new.dta, clear
 *rename NOM unid (en évitant les espaces)
 replace unid = strlower(ustrtrim(stritrim(unid)))
 save, replace
+
+* Retour à la base estimation.dta
+cwf depart
