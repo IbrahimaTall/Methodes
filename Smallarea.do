@@ -371,3 +371,4 @@ frame rename default depart
 
 * Créer un frame maps pour les données spatiales
 frame create maps
+cwf maps
