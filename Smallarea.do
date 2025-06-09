@@ -363,3 +363,4 @@ list Unit fgt0 cv, separator(0)
 * Création d'un code (en évitant les espaces)
 decode Unit, generate(unid)
 replace unid = strlower(ustrtrim(stritrim(unid)))
+duplicates report unid
