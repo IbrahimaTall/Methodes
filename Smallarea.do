@@ -372,3 +372,6 @@ frame rename default depart
 * Créer un frame maps pour les données spatiales
 frame create maps
 cwf maps
+
+* Importer la base spatiale déjà préparée
+use Maps/base_new.dta, clear
