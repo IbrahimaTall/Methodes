@@ -352,3 +352,6 @@ rename avg_fgt?* fgt?
 rename mse_avg_fgt?* mse_fgt?
 gen cv = sqrt(mse_Mean)/Mean
 save pauv_dep.dta, replace
+
+* Affichage des taux: les valeurs sont conformes aux IC de l'EHCVM
+list Unit fgt0 cv, separator(0)
