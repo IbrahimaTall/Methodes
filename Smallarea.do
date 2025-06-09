@@ -365,3 +365,6 @@ decode Unit, generate(unid)
 replace unid = strlower(ustrtrim(stritrim(unid)))
 duplicates report unid
 drop if !Unit
+
+* Mettre la pauv_dep.dta base dans le frame depart
+frame rename default depart
