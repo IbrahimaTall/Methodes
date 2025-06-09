@@ -355,3 +355,7 @@ save pauv_dep.dta, replace
 
 * Affichage des taux: les valeurs sont conformes aux IC de l'EHCVM
 list Unit fgt0 cv, separator(0)
+
+*-------------------------------------------------------------------------------
+*------------- 6. Cartographie des résultats -----------------------------------
+*-------------------------------------------------------------------------------
