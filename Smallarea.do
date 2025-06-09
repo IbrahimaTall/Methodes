@@ -375,3 +375,6 @@ cwf maps
 
 * Importer la base spatiale déjà préparée
 use Maps/base_new.dta, clear
+
+*rename NOM unid (en évitant les espaces)
+replace unid = strlower(ustrtrim(stritrim(unid)))
