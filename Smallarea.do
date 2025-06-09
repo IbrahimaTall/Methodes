@@ -364,3 +364,4 @@ list Unit fgt0 cv, separator(0)
 decode Unit, generate(unid)
 replace unid = strlower(ustrtrim(stritrim(unid)))
 duplicates report unid
+drop if !Unit
