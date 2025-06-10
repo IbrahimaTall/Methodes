@@ -388,3 +388,6 @@ merge 1:1 unid using Maps/base_new.dta, nogen
 
 * Base globale avec données spatiales
 save pauv_dep_data, replace
+
+* Création du de la base de label
+replace fgt0 = round(100*fgt0, .1) if fgt0 < 1
