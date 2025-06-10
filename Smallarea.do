@@ -403,3 +403,6 @@ quietly {
 
 * Installation de l'ado spmap pour la création des cartes
 ssc install spmap
+
+* Cartographie des résultats par régions
+use pauv_dep_data, clear
