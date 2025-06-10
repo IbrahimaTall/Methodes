@@ -385,3 +385,6 @@ cwf depart
 
 * Fusion avec la base spatiale
 merge 1:1 unid using Maps/base_new.dta, nogen
+
+* Base globale avec données spatiales
+save pauv_dep_data, replace
