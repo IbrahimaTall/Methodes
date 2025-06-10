@@ -412,3 +412,6 @@ spmap fgt0 using Maps/cord_new, id(id) fcolor(Heat) ///
  position(12 0) angle(0 0) gap(*.1 *0.5) size(tiny tiny) ///
  color(black blue%80) by(typs)) clnumber(14) legenda(off) ///
  title("Pauvreté départementale") note("Source: Tall, 2024")
+
+* Sauvegarde de la figure
+graph export zmaps.png, as(png) replace
