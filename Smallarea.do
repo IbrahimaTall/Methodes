@@ -406,3 +406,9 @@ ssc install spmap
 
 * Cartographie des résultats par régions
 use pauv_dep_data, clear
+
+spmap fgt0 using Maps/cord_new, id(id) fcolor(Heat) ///
+ label(data(pauv_dep_lab) label(labs) xcoord(x_c) ycoord(y_c) ///
+ position(12 0) angle(0 0) gap(*.1 *0.5) size(tiny tiny) ///
+ color(black blue%80) by(typs)) clnumber(14) legenda(off) ///
+ title("Pauvreté départementale") note("Source: Tall, 2024")
