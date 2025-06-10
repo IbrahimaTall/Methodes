@@ -393,3 +393,10 @@ save pauv_dep_data, replace
 replace fgt0 = round(100*fgt0, .1) if fgt0 < 1
 replace cv = round(100*cv, .1) if cv < 1
 cap decode Unit, generate(dep)
+quietly {
+    expand 2, gen(typs)
+    gen labs = dep if !typs
+    replace labs = string(fgt0) +"("+string(cv)+"%"+")" if typs == 1
+    keep id x_c y_c typs labs Unit
+    save pauv_dep_lab, replace
+}
