@@ -392,3 +392,4 @@ save pauv_dep_data, replace
 * Création du de la base de label
 replace fgt0 = round(100*fgt0, .1) if fgt0 < 1
 replace cv = round(100*cv, .1) if cv < 1
+cap decode Unit, generate(dep)
