@@ -415,3 +415,5 @@ spmap fgt0 using Maps/cord_new, id(id) fcolor(Heat) ///
 
 * Sauvegarde de la figure
 graph export zmaps.png, as(png) replace
+
+* Filtre sur la région de Dakar
