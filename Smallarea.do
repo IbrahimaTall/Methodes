@@ -400,3 +400,6 @@ quietly {
     keep id x_c y_c typs labs Unit
     save pauv_dep_lab, replace
 }
+
+* Installation de l'ado spmap pour la création des cartes
+ssc install spmap
