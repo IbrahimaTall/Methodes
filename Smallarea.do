@@ -425,6 +425,7 @@ replace labs = "KEUR MASSAR" if missing(Unit) & !typs
 replace labs = "??" if missing(Unit) & typs
 save dklab, replace
 
+* Retour sur la base des départements
 use pauv_dep_data, clear
 spmap fgt0 using Maps/cord_new if region == 1, id(id) ///
  fcolor(yellow%1 yellow%5 yellow%10 yellow%20) label(data(dklab) ///
