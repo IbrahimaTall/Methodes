@@ -437,6 +437,7 @@ spmap fgt0 using Maps/cord_new if region == 1, id(id) ///
 graph export z13dkmaps.png, as(png) replace
 
 * Suppression des fichiers temporaires
-foreach x in "mysurvey.dta" "rgphae.dta" "rgphae_mata" "estimation.dta" "rgph_ind" {
+local tampo "mysurvey.dta rgphae.dta rgphae_mata estimation.dta rgph_ind"
+foreach x of local tampo  {
     capture erase `x'
 }
