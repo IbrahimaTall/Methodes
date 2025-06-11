@@ -423,6 +423,7 @@ gen region = mod(int(Unit/10),100), before(Unit)
 keep if region == 1 // filtre sur Dakar
 replace labs = "KEUR MASSAR" if missing(Unit) & !typs
 replace labs = "??" if missing(Unit) & typs
+save dklab, replace
 
 spmap fgt0 using Maps/cord_new if region == 1, id(id) ///
  fcolor(yellow%1 yellow%5 yellow%10 yellow%20) label(data(dklab) ///
