@@ -159,7 +159,7 @@ quietly {
 
 /* 
 Taille ajustée à partir des totaux ci-haut pour avoir la population toale
-dans la base du recensement
+dans la base du recensement car seul 10% de celle-ci est disponible
 */
 quietly {
     generate hhsize = 54.9942667918747 if departement == 11
