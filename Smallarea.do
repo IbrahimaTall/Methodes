@@ -418,6 +418,9 @@ graph export zmaps.png, as(png) replace
 
 * Filtre sur la région de Dakar
 use pauv_dep_lab, clear
+gen region = mod(int(Unit/10),100), before(Unit)
+
+
 spmap fgt0 using Maps/cord_new if region == 1, id(id) ///
  fcolor(yellow%1 yellow%5 yellow%10 yellow%20) label(data(dklab) ///
  label(labs) xcoord(x_c) ycoord(y_c) position(12 0) angle(0 0) ///
