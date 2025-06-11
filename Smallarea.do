@@ -435,3 +435,8 @@ spmap fgt0 using Maps/cord_new if region == 1, id(id) ///
 
 * Sauvegarde de la figure sur Dakar
 graph export z13dkmaps.png, as(png) replace
+
+* Suppression des fichiers temporaires
+foreach x in "mysurvey.dta" "rgphae.dta" "rgphae_mata" "estimation.dta" "rgph_ind" {
+    capture erase `x'
+}
