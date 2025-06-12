@@ -17,3 +17,7 @@ foreach x of numlist 1 3 9 {
     display "`x'"
 }
 * Obtenir les variables numériques
+quietly ds, has(type float)
+foreach x of varlist `r(varlist)' {
+    summarize `x'
+}
