@@ -13,10 +13,11 @@ forvalues i = 1 3 to 10 {//Autre format: (i = 1 3: 10)
 }
 
 *-------------------------- 2. Les boucles foreach -----------------------------------------
+* Affichage de nombres
 foreach x of numlist 1 3 9 {
     display "`x'"
 }
-* Obtenir les variables numériques
+* Summarize des variables numériques
 quietly ds, has(type float)
 foreach x of varlist `r(varlist)' {
     summarize `x'
