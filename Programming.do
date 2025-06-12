@@ -16,3 +16,4 @@ forvalues i = 1 3 to 10 {//Autre format: (i = 1 3: 10)
 foreach x of numlist 1 3 9 {
     display "`x'"
 }
+* Obtenir les variables numériques
