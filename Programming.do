@@ -1,6 +1,6 @@
 *########################## Commercer à programmer #########################################
 sysuse auto, clear
-*-------------------------- 1. Les boucles -------------------------------------------------
+*-------------------------- 1. Les boucles forvalues ---------------------------------------
 * Création des variables alea1, alea4, alea7 et alea10
 forvalues i = 1(3)10 {
     * set seed 12345
