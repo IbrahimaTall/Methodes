@@ -28,4 +28,7 @@ local ++n
 display `n'
 glogal listvar make foreign
 display $listvar
+* Porpriétés d'une commande 
 display "`:properties regress'"
+* Type de résultats
+display "`:results regress'"
