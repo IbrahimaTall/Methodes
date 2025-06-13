@@ -35,4 +35,4 @@ display "`:results regress'"
 * Nb Chars du plus long label
 display "`:label (foreign) maxlength'"
 * Label du code
-display "`:'"
+display "`:label origin 0'"
