@@ -1,4 +1,5 @@
 *########################## Commercer à programmer #########################################
+* La base de données du système
 sysuse auto, clear
 *-------------------------- 1. Les boucles forvalues ---------------------------------------
 * Création des variables alea1, alea4, alea7 et alea10
