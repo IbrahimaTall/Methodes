@@ -22,6 +22,11 @@ foreach x of varlist `r(varlist)' {
     summarize `x'
 }
 *-------------------------- 3. Les macro -----------------------------------------
+matrix define A = (1,4,8\2,5,9\7,2,6)
+matrix rownames A = alpha "My r2" Phi
+matrix colnames A = col "My c2" rho
+
+*-------------------------- 4. Les macro ----------------------------------------------------
 local n = 1
 local ++n
 display `n'
