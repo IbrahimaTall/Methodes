@@ -22,3 +22,10 @@ quietly ds, has(type float)
 foreach x of varlist `r(varlist)' {
     summarize `x'
 }
+*-------------------------- 3. Les macro -----------------------------------------
+local n = 1
+local ++n
+display `n'
+glogal listvar make foreign
+display $listvar
+display "`:properties regress'"
