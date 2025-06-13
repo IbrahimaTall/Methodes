@@ -34,3 +34,5 @@ display "`:properties regress'"
 display "`:results regress'"
 * Nb Chars du plus long label
 display "`:label (foreign) maxlength'"
+* Label du code
+display "`:'"
