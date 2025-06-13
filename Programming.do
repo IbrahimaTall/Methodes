@@ -24,6 +24,8 @@ foreach x of varlist `r(varlist)' {
 *-------------------------- 3. Les matrices ------------------------------------------------
 matrix define A = I(3)
 matrix define B = J(3,3,0)
+matrix Ainv = invsym(A)
+
 matrix define B = (1,4,8\2,5,9\7,2,6)
 matrix rownames A = alpha "My r2" Phi
 matrix colnames A = col "My c2" rho
