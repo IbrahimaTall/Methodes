@@ -32,3 +32,5 @@ display $listvar
 display "`:properties regress'"
 * Type de résultats
 display "`:results regress'"
+* Nb Chars du plus long label
+display "`:label (foreign) maxlength'"
