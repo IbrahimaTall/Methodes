@@ -36,3 +36,5 @@ display "`:results regress'"
 display "`:label (foreign) maxlength'"
 * Label du code
 display "`:label origin 0'"
+* Caractéristiques
+display "`:char _dta[]'"
