@@ -23,15 +23,15 @@ foreach x of varlist `r(varlist)' {
 }
 *-------------------------- 3. Les matrices ------------------------------------------------
 matrix define A = I(3)
-matrix define B = J(3,3,0)
+matrix define B = (1,4,8\2,5,9\7,2,6)
+matrix define C = J(3,3,0)
 matrix Binv = inv(B)
 matrix Ainv = invsym(A)
-matrix L = cholesky(4*I(3) + A’*A)
-matrix C = sweep(B,1)
-matrix R = corr(C)
-matrix D = diag(2,5,7) 
+matrix D = cholesky(4*I(3) + A’*A)
+matrix E = sweep(B,1)
+matrix F = corr(C)
+matrix G = diag(2,5,7) 
 
-matrix define B = (1,4,8\2,5,9\7,2,6)
 matrix rownames A = alpha "My r2" Phi
 matrix colnames A = col "My c2" rho
 
