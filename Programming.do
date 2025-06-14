@@ -31,6 +31,7 @@ matrix D = cholesky(4*I(3) + A’*A)
 matrix E = sweep(B,1)
 matrix F = corr(C)
 matrix G = diag(2,5,7) 
+matrix H = vec(D)
 
 matrix rownames A = alpha "My r2" Phi
 matrix colnames A = col "My c2" rho
