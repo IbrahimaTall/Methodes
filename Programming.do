@@ -28,6 +28,7 @@ matrix Binv = inv(B)
 matrix Ainv = invsym(A)
 matrix L = cholesky(4*I(3) + A’*A)
 matrix C = sweep(B,1)
+matrix R = corr(C)
 
 matrix define B = (1,4,8\2,5,9\7,2,6)
 matrix rownames A = alpha "My r2" Phi
