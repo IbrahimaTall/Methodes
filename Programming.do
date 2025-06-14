@@ -32,6 +32,7 @@ matrix E = sweep(B,1)
 matrix F = corr(C)
 matrix G = diag(2,5,7) 
 matrix H = vec(D)
+atrix K = vecdiag(D)
 
 matrix rownames A = alpha "My r2" Phi
 matrix colnames A = col "My c2" rho
