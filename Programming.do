@@ -24,6 +24,7 @@ foreach x of varlist `r(varlist)' {
 *-------------------------- 3. Les matrices ------------------------------------------------
 matrix define A = I(3)
 matrix define B = J(3,3,0)
+matrix Binv = inv(B)
 matrix Ainv = invsym(A)
 matrix L = cholesky(4*I(3) + A’*A)
 
