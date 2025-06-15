@@ -60,3 +60,4 @@ display "`:char _dta[]'"
 
 *-------------------------- 5. Les macro ----------------------------------------------------
 capture drop tallprg.ado
+*! tallprog v01 15 juin 2025
