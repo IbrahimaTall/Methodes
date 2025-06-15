@@ -63,6 +63,8 @@ capture drop tallprg.ado
 *! tallprog v01 15 juin 2025
 program tallprog
    version 13
-   syntax varlist(max=1 numeric)
-   local res p7525 p9010 p9505 p9901
+   syntax varlist(max=1 numeric) [if] [in]
+   tempvar p9010
+   marksample touse
+
    
