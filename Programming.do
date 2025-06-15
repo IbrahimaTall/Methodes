@@ -1,4 +1,6 @@
 *########################## Commercer à programmer #########################################
+adopath
+sysdir
 * La base de données du système
 sysuse auto, clear
 *-------------------------- 1. Les boucles forvalues ---------------------------------------
