@@ -60,7 +60,7 @@ display "`:char _dta[]'"
 
 *-------------------------- 5. Les macro ----------------------------------------------------
 capture drop prog9010.ado
-*! tallprog v01 15 juin 2025
+*! prog9010 v01 15 juin 2025
 program tallprog
    version 13
    syntax varlist(max=1 numeric) [if] [in]
