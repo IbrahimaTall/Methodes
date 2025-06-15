@@ -61,7 +61,7 @@ display "`:char _dta[]'"
 *-------------------------- 5. Les macro ----------------------------------------------------
 capture drop prog9010.ado
 *! prog9010 v01 15 juin 2025
-program tallprog
+program prog9010
    version 13
    syntax varlist(max=1 numeric) [if] [in]
    tempname p9010
