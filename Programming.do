@@ -59,7 +59,7 @@ display "`:label origin 0'"
 display "`:char _dta[]'"
 
 *-------------------------- 5. Les macro ----------------------------------------------------
-capture drop tallprg.ado
+capture drop prog9010.ado
 *! tallprog v01 15 juin 2025
 program tallprog
    version 13
