@@ -68,3 +68,4 @@ program tallprog
    marksample touse
    quietly summarize `varlist' if `touse', detail
    scalar `p9010' = r(90) - r(10)
+   display as txt "Intervelle interpercentile" as result `p9010'
