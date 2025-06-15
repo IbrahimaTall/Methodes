@@ -66,5 +66,6 @@ program tallprog
    syntax varlist(max=1 numeric) [if] [in]
    tempvar p9010
    marksample touse
-
+   display as txt "Intervelle interpercentile"
+   quietly summarize `varlist' if `touse'
    
