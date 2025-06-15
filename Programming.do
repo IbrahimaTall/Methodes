@@ -66,6 +66,5 @@ program tallprog
    syntax varlist(max=1 numeric) [if] [in]
    tempname p9010
    marksample touse
-   display as txt "Intervelle interpercentile"
    quietly summarize `varlist' if `touse', detail
    scalar `p9010' = r(90) - r(10)
