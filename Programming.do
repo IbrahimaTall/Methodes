@@ -57,3 +57,5 @@ display "`:label (foreign) maxlength'"
 display "`:label origin 0'"
 * Caractéristiques
 display "`:char _dta[]'"
+
+*-------------------------- 4. Les macro ----------------------------------------------------
