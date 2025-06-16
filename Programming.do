@@ -37,7 +37,6 @@ matrix H = vec(D) //Vecteurs
 matrix K = vecdiag(D) //Vecteur diagonal
 matrix U = matuniform(3,4) //Matrice aléatoire
 matrix L = hadamard(B,C) //Hadamard fonctions
-
 matrix rownames A = alpha "My r2" Phi
 matrix colnames A = col "My c2" rho
 
