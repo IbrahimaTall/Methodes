@@ -35,7 +35,7 @@ matrix F = corr(C) //Fonction Coorelation
 matrix G = diag(2,5,7) //Matrice diagonale de dimension 3x3
 matrix H = vec(D) //Vecteurs
 matrix K = vecdiag(D) //Vecteur diagonal
-matrix U = matuniform(3,4)
+matrix U = matuniform(3,4) //Matrice aléatoire
 matrix L = hadamard(B,C)
 
 matrix rownames A = alpha "My r2" Phi
