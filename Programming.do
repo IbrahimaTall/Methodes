@@ -36,7 +36,7 @@ matrix G = diag(2,5,7) //Matrice diagonale de dimension 3x3
 matrix H = vec(D) //Vecteurs
 matrix K = vecdiag(D) //Vecteur diagonal
 matrix U = matuniform(3,4) //Matrice aléatoire
-matrix L = hadamard(B,C)
+matrix L = hadamard(B,C) //Hadamard fonctions
 
 matrix rownames A = alpha "My r2" Phi
 matrix colnames A = col "My c2" rho
