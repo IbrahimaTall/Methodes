@@ -24,8 +24,8 @@ foreach x of varlist `r(varlist)' {
     summarize `x'
 }
 *-------------------------- 3. Les matrices ------------------------------------------------
-matrix define A = I(3) //Matrix identité carrée
-matrix define B = (1,4,8\2,5,9\7,2,6)
+matrix define A = I(3) //Matrix identité carrée 3x3
+matrix define B = (1,4,8\2,5,9\7,2,6) //Matrice simple carrée de dimension 3x3
 matrix define C = J(3,3,0)
 matrix Binv = inv(B)
 matrix Ainv = invsym(A)
