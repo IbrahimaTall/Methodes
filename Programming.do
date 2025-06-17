@@ -67,11 +67,12 @@ program prog9010, rclass
    marksample touse
    quietly summarize `varlist' if `touse', detail
    scalar `p9010' = r(90) - r(10)
+   scalar `N' = _N
    if "`print'" != "noprint" {
       display as txt "Intervalle est p9010 = " as result `p9010'
    } 
    else {
-      quietly scalar `N' = _N
+      display as txt ""
    }
    return scalar p9010 = `p9010'
 end
