@@ -68,9 +68,10 @@ program prog9010, rclass
    quietly summarize `varlist' if `touse', detail
    scalar `p9010' = r(90) - r(10)
    if "`print'" != "noprint" {
-      display as txt "Intervelle est p9010 = " as result `p9010'
+      display as txt "Intervalle est p9010 = " as result `p9010'
    } 
    else {
+      quietly 
    }
    return scalar p9010 = `p9010'
 end
