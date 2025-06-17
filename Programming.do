@@ -63,7 +63,7 @@ capture drop prog9010.ado
 program prog9010, rclass
    version 13
    syntax varlist(max=1 numeric) [if] [in] [, noPRINT]
-   tempname p9010
+   tempname p9010 N
    marksample touse
    quietly summarize `varlist' if `touse', detail
    scalar `p9010' = r(90) - r(10)
@@ -71,7 +71,7 @@ program prog9010, rclass
       display as txt "Intervalle est p9010 = " as result `p9010'
    } 
    else {
-      quietly 
+      quietly scalar `N' = _N
    }
    return scalar p9010 = `p9010'
 end
