@@ -62,7 +62,7 @@ capture drop prog9010.ado
 *! prog9010 v01 15 juin 2025
 program prog9010, rclass
    version 13
-   syntax varlist(max=1 numeric) [if] [in]
+   syntax varlist(max=1 numeric) [if] [in] [, noPRINT]
    tempname p9010
    marksample touse
    quietly summarize `varlist' if `touse', detail
