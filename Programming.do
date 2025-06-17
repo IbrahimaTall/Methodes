@@ -39,7 +39,7 @@ matrix U = matuniform(3,4) //Matrice aléatoire
 matrix L = hadamard(B,C) //Hadamard fonctions
 matrix rownames A = alpha "My r2" Phi
 matrix colnames A = col "My c2" rho
-matlist 2*A, border(rows) rowtitle(rows) left(4)
+matlist 2*A, border(rows) rowtitle(rows) left(4) //border(rows)==border(top+bottom)
 *-------------------------- 4. Les macro ----------------------------------------------------
 local n = 1
 local ++n
