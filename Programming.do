@@ -69,6 +69,8 @@ program prog9010, rclass
    scalar `p9010' = r(90) - r(10)
    if "`print'" != "noprint" {
       display as txt "Intervelle" as result `p9010'
+   } 
+   else {
    }
    return scalar p9010 = `p9010'
 end
