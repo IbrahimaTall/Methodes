@@ -5,7 +5,7 @@ sysdir // idem que plus haut
 sysuse auto, clear // Base d'essai
 *-------------------------- 1. Les boucles forvalues ---------------------------------------
 * Création des variables alea1, alea4, alea7 et alea10
-forvalues i = 1(3)10 {
+forvalues i = 1(3)10 { // Première forme
     * set seed 12345
     generate alea`i' = uniform()
 }
