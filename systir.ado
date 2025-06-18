@@ -5,12 +5,13 @@ syntax varlist(min=1 max=1 numeric) [, strata(varlist) noENTIER(string)]
 tempname ndv ndstr
 quietly distinct `varlist', missing
 scalar local `ndv' r(distinct)
-if ``ndv'' != 1 & "`strata'" == "" {
-  display error "La taille doit être unique dans le groupe"
-  exit 203
-}
 if "`strata'" != "" {
   quietly distinct `strata', missing
   scalar local `ndstr' r(distinct)
 }
-if 
+if ``ndv'' != 1 & "`strata'" == "" {
+  display error "La taille doit être unique dans le groupe"
+  exit 203
+}
+
+if ``ndv'' == 1
