@@ -11,9 +11,7 @@ if "`strata'" != "" {
   quietly distinct `strata', missing joint
   scalar local `ndstr' r(distinct)
 }
-if ``ndv'' != 1 & "`strata'" == "" {
-  display error "La taille doit être unique dans le groupe"
+if ``ndv'' != ``ndstr'' {
+  display "{error:La taille doit être unique dans le groupe}"
   exit 203
 }
-
-if ``ndv'' == 1
