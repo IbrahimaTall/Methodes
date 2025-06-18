@@ -2,3 +2,10 @@
 program define systir, rclass byable(recall)
 version 14
 syntax varlist(min=1 max=1 numeric) [, strata(varlist) noENTIER(string)]
+tempname ndv ndstr
+quietly distinct `varlist', missing
+local `ndv' r(distinct)
+if ``ndv'' != 1 & "`strata'" == "" {
+  display error "La taille doit être unique dans le groupe"
+  exit 203
+}
