@@ -15,3 +15,5 @@ if ``ndv'' != ``ndstr'' {
   display "{error:La taille doit être unique dans le groupe}"
   exit 203
 }
+else {
+}
