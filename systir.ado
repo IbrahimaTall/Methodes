@@ -8,7 +8,7 @@ scalar `ndstr' = 1
 quietly distinct `varlist', missing
 scalar local `ndv' r(distinct)
 if "`strata'" != "" {
-  quietly distinct `strata', missing
+  quietly distinct `strata', missing joint
   scalar local `ndstr' r(distinct)
 }
 if ``ndv'' != 1 & "`strata'" == "" {
