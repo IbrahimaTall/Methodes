@@ -10,3 +10,4 @@ if ``ndv'' != 1 & "`strata'" == "" {
   exit 203
 }
 quietly distinct `strata', missing
+scalar local `ndstr' r(distinct)
