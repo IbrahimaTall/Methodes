@@ -3,7 +3,7 @@ program define systir, rclass byable(recall)
 version 14
 syntax varlist(min=1 max=1 numeric) [, strata(varlist) noENTIER(string)]
 tempvar strate
-tempname ndv ndstr
+tempname ndv ndstr niveau
 scalar `ndv' = 1
 scalar `ndstr' = 1
 quietly distinct `varlist', missing
@@ -19,6 +19,6 @@ if ``ndv'' != ``ndstr'' {
 else {
   quietly {
     egen `strate' = group(`strata') label
-    levelsof `strate', generate(
+    levelsof `strate', generate(`niveau')
   }
 }
