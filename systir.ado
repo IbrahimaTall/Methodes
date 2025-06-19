@@ -2,6 +2,7 @@
 program define systir, rclass byable(recall)
 version 14
 syntax varlist(min=1 max=1 numeric) [, strata(varlist) noENTIER(string)]
+tempvar strate
 tempname ndv ndstr
 scalar `ndv' = 1
 scalar `ndstr' = 1
@@ -16,4 +17,5 @@ if ``ndv'' != ``ndstr'' {
   exit 203
 }
 else {
+  quietly egen `strate' = group(`strata') label
 }
