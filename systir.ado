@@ -19,6 +19,9 @@ if ``ndv'' != ``ndstr'' {
 else {
   quietly {
     egen `strate' = group(`strata') label
+    generate `vartxt' = string(`varlist')
+    encode `vartxt', generate(`varcode')
     levelsof `strate', generate(`niveau')
+    
   }
 }
