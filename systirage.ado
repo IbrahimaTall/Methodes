@@ -10,7 +10,7 @@ quietly distinct `varlist', missing
 scalar local `ndv' r(ndistinct)
 if "`strata'" != "" {
   quietly distinct `strata', missing joint
-  scalar local `ndstr' r(distinct)
+  scalar local `ndstr' r(ndistinct)
 }
 if ``ndv'' != ``ndstr'' {
   display "{error:La taille doit être unique dans le groupe}"
