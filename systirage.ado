@@ -7,7 +7,7 @@ tempname ndv ndstr nivstr nivvar
 scalar `ndv' = 1
 scalar `ndstr' = 1
 quietly distinct `varlist', missing
-scalar local `ndv' r(distinct)
+scalar local `ndv' r(ndistinct)
 if "`strata'" != "" {
   quietly distinct `strata', missing joint
   scalar local `ndstr' r(distinct)
