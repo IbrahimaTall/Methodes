@@ -2,7 +2,7 @@
 program define systir, rclass byable(recall)
 version 14
 syntax varlist(min=1 max=1 numeric) [, strata(varlist) noENTIER(string)]
-tempvar strate
+tempvar strate vartxt varcode
 tempname ndv ndstr niveau
 scalar `ndv' = 1
 scalar `ndstr' = 1
