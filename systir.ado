@@ -17,5 +17,8 @@ if ``ndv'' != ``ndstr'' {
   exit 203
 }
 else {
-  quietly egen `strate' = group(`strata') label
+  quietly {
+    egen `strate' = group(`strata') label
+    levelsof `strate', generate(
+  }
 }
