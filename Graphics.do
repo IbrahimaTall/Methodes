@@ -62,4 +62,5 @@ twoway fpfitci mpg weight, fintensity(inten30) alwidth(none)|| scatter mpg weigh
 *---------- mband
 twoway scatter mpg weight || mband mpg weight
 twoway scatter mpg weight || mspline mpg weight
-/*Il y a aussi des graphiques avec des axes différents
+
+/*Il y a aussi des graphiques avec des axes différents en abscisse ou en ordonnées
