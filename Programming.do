@@ -1,6 +1,6 @@
 *########################## Commercer à programmer #########################################
  adopath //Les directions
-sysdir // idem que plus haut
+sysdir // idem que plus-haut
 * La base de données du système
 sysuse auto, clear // Base d'essai
 *-------------------------- 1. Les boucles forvalues ---------------------------------------
