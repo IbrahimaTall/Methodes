@@ -16,6 +16,7 @@ forvalues i = 1 3 to 10 {//Autre format: (i = 1 3: 10)
 *-------------------------- 2. Les boucles foreach -----------------------------------------
 * Affichage de nombres impairs de 1 à 20
 foreach x of numlist 1(2)20 {
+    * Affichage
     display "`x'"
 }
 * Summarize des variables numériques
