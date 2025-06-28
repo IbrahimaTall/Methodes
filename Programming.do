@@ -6,7 +6,7 @@ sysuse auto, clear // Base d'essai
 *-------------------------- 1. Les boucles forvalues ---------------------------------------
 * Création des variables alea1, alea4, alea7 et alea10
 forvalues i = 1(3)10 { // Première forme
-    * set seed 12345
+    * set seed 12345 //Fixer
     generate alea`i' = uniform()
 }
 * Création des variables norm1, norm4, norm7 et norm10
