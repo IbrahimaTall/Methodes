@@ -1,5 +1,5 @@
 *########################## Commercer à programmer #########################################
- adopath //Les directions
+adopath //Les directions
 sysdir // idem que plus haut
 * La base de données du système
 sysuse auto, clear // Base d'essai
