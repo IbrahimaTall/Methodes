@@ -26,3 +26,5 @@ Nous utilisons la base de l'enquete harmonis√©e sur les conditions de vie des m√
  	use ehcvm.dta, clear
 	describe
 
+Ces commandes permettent de produire des statistiques sans en assurer l'exportation directe.
+
