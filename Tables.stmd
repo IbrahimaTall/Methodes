@@ -22,3 +22,7 @@ Les commandes de base abordées ici sont:
  - collect
 
 Nous utilisons la base de l'enquete harmonisée sur les conditions de vie des ménages (EHCVM) 2018/2019 de l'Agence national de la statistique et de la démographie (ANSD).
+
+ use ehcvm.dta, clear
+	describe
+
