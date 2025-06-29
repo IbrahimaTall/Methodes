@@ -32,3 +32,5 @@ Ces commandes permettent de produire des statistiques sans en assurer l'exportat
 
 La variable est généralement de type **catégorielle** et ses modalités sont placées en ligne.
 
+	tabulate region
+
