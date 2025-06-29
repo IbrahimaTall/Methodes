@@ -1,2 +1,11 @@
 # Tableaux de statistiques descriptives
 Le Logiciel stata offre plusieurs ados écrits par des utilisateurs :    
+
+ - xtable (Weverthon Machado)
+ - desctable 
+ - outreg (John Gallup) 
+ - tabout (Ian Watson) 
+ - estout (Ben Jann) 
+ - outreg2 (Roy Wada) 
+ - asdoc (Attaullah Shah) 
+ - summtab (John A. Gallis)
