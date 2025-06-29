@@ -11,3 +11,12 @@ Le Logiciel stata offre plusieurs ados écrits par des utilisateurs :
  - summtab (John A. Gallis)
 
 Les commandes de base abordées ici sont:
+
+ - tabulate
+ - summarize
+ - tabstat
+ - table
+ - dtable
+ - etable
+ - statby
+ - collect
