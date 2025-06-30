@@ -28,7 +28,7 @@ Nous utilisons la base de l'enquete harmonisée sur les conditions de vie des m�
 
 Ces commandes permettent de produire des statistiques sans en assurer l'exportation directe.
 
-## 1. Commande tabulate      
+## 1. Tableaux simples      
 
 La variable est généralement de type **catégorielle** et ses modalités sont placées en ligne.
 
