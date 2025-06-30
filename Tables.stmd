@@ -35,3 +35,5 @@ La variable est généralement de type **catégorielle** et ses modalités sont 
 	tabulate region
 
 La prise en compte de statistiques d'une variable **continue** est faite avec l'option *summarize()*.
+
+	tabulate region, summarize(pcexp) mean nofreq 
