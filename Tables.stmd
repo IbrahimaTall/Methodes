@@ -43,3 +43,5 @@ La version bivariée est donnée par la précision d'une deuxième variable **ca
 	tabulate region pauv, row nofreq
 
 La prise en compte de statistiques d'une variable **continue** dans la version bivariée se fait également avec l'option *summarize()*:
+
+	tabulate region pauv, summarize(pcexp) mean nofreq
