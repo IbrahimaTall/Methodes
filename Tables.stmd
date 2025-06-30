@@ -37,3 +37,5 @@ La variable est généralement de type **catégorielle** et ses modalités sont 
 La prise en compte de statistiques d'une variable **continue** est faite avec l'option *summarize()*.
 
 	tabulate region, summarize(pcexp) mean nofreq 
+
+La version bivariée est donnée par la précision d'une deuxième variable **catégorielle** dont les modalités sont placées en ordonnées :
