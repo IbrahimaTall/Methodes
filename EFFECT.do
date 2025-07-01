@@ -1,6 +1,6 @@
 * Base de données sur le don de semences agricoles (en T)
 use effectdata.dta, clear
-* Description des variables de la base
+* Description des variables
 describe
 * Structure des semences reçu par les ménages par région et par campagne
 table (REG)(CAMP) if inlist(REG,6,7,8,9,11,12,14) & CAMP > 2021, statistic(mean SEM) nformat(%9.0fc)
