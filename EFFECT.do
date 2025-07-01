@@ -86,7 +86,6 @@ teffects ipwra (PROD PARC MAT CRED, poisson noconstant)(PROG AGE i.TYPSEM i.TYPS
 * Qualité des propensions
 tebalance density AGE, line1opts(lcolor(red)) line2opts(lcolor(green))
 graph export gripwra2.png, as(png) replace
-
 * Qualité globale
 tebalance overid, nolog // sauf nnmatch et psmatch
 
