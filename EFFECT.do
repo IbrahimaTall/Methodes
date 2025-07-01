@@ -12,7 +12,7 @@ didregress (PROD PARC MAT CRED AGE i.TYPSEM i.TYPSEM)(SEM, continuous), group(RE
 * Variable de traitement de type binaire
 generate PROG = SEM != 0
 label variable PROG "Identification des bénéficiaires"
-* Impact des dons en semences
+* Impact des dons en semences agricole
 didregress (PROD PARC MAT CRED AGE i.TYPSEM i.TYPSEM)(PROG), group(REG) time(CAMP)
 * Diagnostic des tendences parallèles
 estat trendplots, title("Tendance parallèles")
