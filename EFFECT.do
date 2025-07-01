@@ -1,4 +1,4 @@
-* Base de données sur le don de semences agricoles (en T)
+* Base de données sur le don de semences agricoles
 use effectdata.dta, clear
 * Description des variables
 describe
