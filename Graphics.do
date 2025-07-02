@@ -4,7 +4,7 @@ sysuse auto, clear
 graph bar (count), over(foreign) intensity(*0.5)
 graph hbar (median) price, over(foreign)
 graph bar (percent), over(rep78) over(foreign)
-*--------- dot
+*--------- dot --
 graph dot (median) length headroom, over(foreign) marker(1, msymbol(S)) linetype(line)
 *--------- Box plot
 graph box price, over(foreign) medtype(marker) medmarker(msymbol(Dh))
