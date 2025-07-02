@@ -1,6 +1,6 @@
 * Lecture de la base
 sysuse auto, clear
-*-------- Categorical barplot --
+*-------- Categorical barplot ---------------------------------------------------------
 graph bar (count), over(foreign) intensity(*0.5)
 graph hbar (median) price, over(foreign)
 graph bar (percent), over(rep78) over(foreign)
