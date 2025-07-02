@@ -1,4 +1,4 @@
-* Lecture de la base auto
+* Lecture de la base aut
 sysuse auto, clear
 *-------- Categorical barplot ---------------------------------------------------------
 graph bar (count), over(foreign) intensity(*0.5)
