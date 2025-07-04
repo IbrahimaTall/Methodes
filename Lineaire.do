@@ -1,4 +1,4 @@
-/* Le modèle linéaire est un support pour plusieurs modèles économé
+/* Le modèle linéaire est un support pour plusieurs modèles économ
 * La compréhension de ce modèle est essentiel en termes de fonctionnement et de conditions de validité.
 * Ce tutoriel permet de mettre en pratique le modèle linéaire multiple
 * En appliquant les tests paramétriques, les contraintes et la prévision.*/
