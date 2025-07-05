@@ -56,3 +56,6 @@ Elle permet d'estimer les caractéristiques d'une variables continue, avec la po
   - regress (et autres)
 
 Cette commande collecte les statistiques de sortie des commandes *summarize* et *regress* (ou toute autre commande de regression).
+
+	statsby mean=r(mean) median=r(p50) ratio=(r(mean)/r(p50)), by(pauv) saving(mytab, replace): summarize pcexp zref, detail
+
