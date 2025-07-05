@@ -71,3 +71,4 @@ La sortie d'une regression:
 Pour collectrer les statistiques, il faut créer une collection:
 
 	collect clear
+	collect create mycol
