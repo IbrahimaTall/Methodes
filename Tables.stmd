@@ -55,3 +55,4 @@ Elle permet d'estimer les caractéristiques d'une variables continue, avec la po
   - summarize
   - regress (et autres)
 
+Cette commande collecte les statistiques de sortie des commandes *summarize* et *regress* (ou toute autre commande de regression).
