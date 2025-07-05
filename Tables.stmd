@@ -72,3 +72,4 @@ Pour collectrer les statistiques, il faut créer une collection:
 
 	collect clear
 	collect create mycol
+	collect, name(mycol): summarize hhsize pcexp
