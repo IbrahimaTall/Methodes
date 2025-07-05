@@ -78,3 +78,4 @@ Pour collectrer les statistiques, il faut créer une collection:
 
 La sortie de regression:
 
+	collect _r_b _r_p _r_se _r_z: regress pcexp zref pauv
