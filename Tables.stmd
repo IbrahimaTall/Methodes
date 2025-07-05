@@ -47,3 +47,6 @@ La prise en compte de statistiques d'une variable **continue** dans la version b
 	tabulate region pauv, summarize(pcexp) mean nofreq
 
 Elle permet d'estimer les caractéristiques d'une variables continue, avec la possibilité de séparer les statistiques suivant les modalités d'une variable **catégorielle**.
+
+	tabstat pcexp zref, statistics(mean sd) by(pauv)   
+
