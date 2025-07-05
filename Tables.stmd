@@ -68,3 +68,4 @@ La sortie d'une regression:
   - summarize
   - regress (et autres)
   
+Pour collectrer les statistiques, il faut créer une collection:
