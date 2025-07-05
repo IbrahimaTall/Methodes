@@ -74,3 +74,4 @@ Pour collectrer les statistiques, il faut créer une collection:
 	collect create mycol
 	collect, name(mycol): summarize hhsize pcexp
 	collect layout (result)(var), name(mycol)
+	collect export Calcul.xlsx, name(mycol) as(xlsx) sheet(essai) replace
