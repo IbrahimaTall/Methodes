@@ -80,3 +80,4 @@ La sortie de regression:
 
 	collect _r_b _r_p _r_se _r_z: regress pcexp zref pauv
 	collect layout (result)(var)
+	collect export Calcul.xlsx, as(xlsx) sheet(essai) cell(B5) modify
