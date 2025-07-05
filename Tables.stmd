@@ -51,3 +51,7 @@ Elle permet d'estimer les caractéristiques d'une variables continue, avec la po
 	tabstat pcexp zref, statistics(mean sd) by(pauv)   
 
 ## 2. Stratification des résultats avec statsby 
+
+  - summarize
+  - regress (et autres)
+
