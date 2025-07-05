@@ -59,3 +59,4 @@ Cette commande collecte les statistiques de sortie des commandes *summarize* et 
 
 	statsby mean=r(mean) median=r(p50) ratio=(r(mean)/r(p50)), by(pauv) saving(mytab, replace): summarize pcexp zref, detail
 
+La sortie d'une regression:
