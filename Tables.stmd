@@ -64,3 +64,7 @@ La sortie d'une regression:
 	statsby, saving(myreg, replace): regress pcexp zref pauv
 
 ## 3. Extraction de résultats avec collect
+
+  - summarize
+  - regress (et autres)
+  
