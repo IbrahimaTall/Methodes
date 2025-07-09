@@ -1,5 +1,5 @@
 * This is a model for survival analysis
-webuse cancer, clear mesam
+webuse cancer, clear mesa
 stset studytim , failure(died) // crée des variables _st _d _t _t0
 ltable studytime died, survival // défautes
 ltable studytime died, failure
