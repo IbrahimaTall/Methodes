@@ -8,7 +8,7 @@ studytim: temps de traitement des patients avant décès
 survenance du décès = 1
 */
 describe _* // Les variables générées
-
+* Statistiques 
 ltable studytime died, survival // défautes
 ltable studytime died, failure
 ltable studytime died, hazard
