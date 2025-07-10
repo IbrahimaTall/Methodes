@@ -9,7 +9,7 @@ survenance du décès = 1
 */
 describe _* // Les variables générées _st _d _t _t0
 
-* Statistiques des 
+* Statistiques des patients
 stsum, by(drug)
 
 ltable studytime died, survival // par défaut
