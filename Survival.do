@@ -2,12 +2,12 @@
 webuse cancer, clear
 describe
 * Déclaration des données
-stset studytim , failure(died) // crée des variables _st _d _t _t0
+stset studytim , failure(died) 
 /*
 studytim: temps de traitement des patients avant décès
 survenance du décès = 1
 */
-describe _* // Les variables générées
+describe _* // Les variables générées // crée des variables _st _d _t _t0
 * Statistiques 
 stsum, by(drug)
 
