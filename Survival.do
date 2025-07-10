@@ -3,6 +3,10 @@ webuse cancer, clear
 describe
 * Déclaration des données
 stset studytim , failure(died) // crée des variables _st _d _t _t0
+/*
+studytim: temps de traitement des patients avant décès
+survenance du décès = 1
+
 ltable studytime died, survival // défautes
 ltable studytime died, failure
 ltable studytime died, hazard
