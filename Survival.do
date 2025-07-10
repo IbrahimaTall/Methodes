@@ -11,7 +11,7 @@ describe _* // Les variables générées _st _d _t _t0
 * Statistiques 
 stsum, by(drug)
 
-ltable studytime died, survival // défautes
+ltable studytime died, survival // pdéfautes
 ltable studytime died, failure
 ltable studytime died, hazard
 ltable studytime died, graph notable
