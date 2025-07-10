@@ -7,7 +7,7 @@ stset studytim , failure(died)
 studytim: temps de traitement des patients avant décès
 survenance du décès = 1
 */
-describe _* // Les variables générées crée des varia_st _d _t _t0
+describe _* // Les variables générées crée des vari_st _d _t _t0
 * Statistiques 
 stsum, by(drug)
 
