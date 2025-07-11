@@ -29,3 +29,4 @@ sts list, by(drug) compare
 sts graph, survival
 sts graph, cumhaz
 sts graph, na // idem que precedemment
+sts graph, by(drug)
