@@ -20,3 +20,4 @@ ltable studytime died, hazard
 ltable studytime died, graph notable
 
 * Table de fonction de survie 
+sts list, survival
