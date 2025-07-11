@@ -51,3 +51,4 @@ stcox, hr
 /* Fonctions hazard et de survie: méthode de Kaplan-Meier product-limit et table de vie */
 generate ID = _n
 label variable ID "Identifiant de la variable"
+* Reconnder la variable drug
