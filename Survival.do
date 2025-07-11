@@ -24,3 +24,5 @@ sts list, survival
 sts list, failure
 sts list, hazard
 sts list, by(drug) compare
+
+* Graph des fonctions de survie 
