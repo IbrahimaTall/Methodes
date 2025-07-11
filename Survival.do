@@ -23,3 +23,4 @@ ltable studytime died, graph notable
 sts list, survival
 sts list, failure
 sts list, hazard
+sts list, by(drug) compare
