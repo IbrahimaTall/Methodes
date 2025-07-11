@@ -12,6 +12,8 @@ describe _* // Les variables générées _st _d _t _t0
 * Statistiques des patients
 stsum, by(drug)
 
+*--------------------------- Estimation des fonctions Hazard et de survie
+
 ltable studytime died, survival // par défaut
 ltable studytime died, failure
 ltable studytime died, hazard
