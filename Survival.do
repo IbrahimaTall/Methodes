@@ -34,3 +34,5 @@ sts graph, by(drug)
 * Test 
 sts test drug, logrank
 sts test drug, wilcoxon
+
+* Création de variables
