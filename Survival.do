@@ -30,3 +30,5 @@ sts graph, survival
 sts graph, cumhaz
 sts graph, na // idem que precedemment
 sts graph, by(drug)
+
+* Test 
