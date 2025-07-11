@@ -42,3 +42,4 @@ sts generate hazard = h // Hazard component = risque
 sts generate cumhg = na, by(drug) // Nelson Aalen Cumulative Hazard function
 
 *--------------------------- Modèle paramétric et de cox en temps continue
+streg drug age, distribution(weibull) nolog nohr //no hazard ratios
