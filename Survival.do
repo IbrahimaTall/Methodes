@@ -36,3 +36,4 @@ sts test drug, logrank
 sts test drug, wilcoxon
 
 * Création de variables
+sts generate survie = s // Kalpan Meier Survival function
