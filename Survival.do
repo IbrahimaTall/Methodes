@@ -45,3 +45,4 @@ sts generate cumhg = na, by(drug) // Nelson Aalen Cumulative Hazard function
 streg drug age, distribution(weibull) nolog nohr //no hazard ratios
 stcurv, hazard at(sex=(0 1) age=50) kernel(gauss) yscale(log) range(1 39)
 stcox drug age, nohr base(s0) basech(ch0)
+stcox, hr
