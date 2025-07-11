@@ -18,3 +18,5 @@ ltable studytime died, survival // par défaut
 ltable studytime died, failure
 ltable studytime died, hazard
 ltable studytime died, graph notable
+
+* Table de fonction de survie 
