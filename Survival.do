@@ -59,3 +59,4 @@ label values drug drug
 expand studytim
 bysort id: generate j = _n
 lab var j "Les mois écoulés"
+bysort id: generate dead = died==1 & _n==_N
