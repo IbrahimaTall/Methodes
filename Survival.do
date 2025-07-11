@@ -58,3 +58,4 @@ label define drug 0 placebo 1 drug
 label values drug drug
 expand studytim
 bysort id: generate j = _n
+lab var j "Les mois écoulés"
