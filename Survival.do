@@ -60,3 +60,4 @@ expand studytim
 bysort id: generate j = _n
 lab var j "Les mois écoulés"
 bysort id: generate dead = died==1 & _n==_N
+label variable dead "Variable binaire pour le modèle de risque discret"
