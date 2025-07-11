@@ -27,3 +27,4 @@ sts list, by(drug) compare
 
 * Graph des fonctions de survie 
 sts graph, survival
+sts graph, cumhaz
