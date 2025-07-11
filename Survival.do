@@ -38,3 +38,4 @@ sts test drug, wilcoxon
 * Création de variables
 sts generate survie = s // Kalpan Meier Survival function
 sts generate failure = f // Kalpan Meier Failure function
+sts generate hazard = h // Hazard component = risque
