@@ -57,3 +57,4 @@ recode drug 1=0 2/3=1
 label define drug 0 placebo 1 drug
 label values drug drug
 expand studytim
+bysort id: generate j = _n
