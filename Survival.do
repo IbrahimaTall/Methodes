@@ -32,3 +32,4 @@ sts graph, na // idem que precedemment
 sts graph, by(drug)
 
 * Test 
+sts test drug, logrank
