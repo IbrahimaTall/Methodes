@@ -39,3 +39,4 @@ sts test drug, wilcoxon
 sts generate survie = s // Kalpan Meier Survival function
 sts generate failure = f // Kalpan Meier Failure function
 sts generate hazard = h // Hazard component = risque
+sts generate cumhg = na, by(drug) // Nelson Aalen Cumulative Hazard function
