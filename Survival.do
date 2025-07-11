@@ -47,4 +47,7 @@ stcurv, hazard at(sex=(0 1) age=50) kernel(gauss) yscale(log) range(1 39)
 stcox drug age, nohr base(s0) basech(ch0)
 stcox, hr
 
-*--------------------------- 
+*--------------------------- Modèle à temps discret
+/* Fonctions hazard et de survie: méthode de Kaplan-Meier product-limit et table de vie */
+generate ID = _n
+label variable ID "Identifiant de la variable"
