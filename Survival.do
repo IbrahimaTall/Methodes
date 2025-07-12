@@ -4,7 +4,7 @@ describe
 * Déclaration des données
 stset studytim , failure(died) 
 /*
-studytim: temps de traitement des patients avant décè
+studytim: temps de traitement des patients avant déc
 */
 describe _* // Les variables générées _st _d _t _t0
 
