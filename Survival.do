@@ -5,7 +5,6 @@ describe
 stset studytim , failure(died) 
 /*
 studytim: temps de traitement des patients avant décès
-s
 */
 describe _* // Les variables générées _st _d _t _t0
 
