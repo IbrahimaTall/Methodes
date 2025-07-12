@@ -3,7 +3,7 @@ webuse cancer, clear
 describe
 * Déclaration des données
 stset studytim , failure(died) 
-*studytim: temps de traitement des patients avant*/
+*studytim: temps de traitement des patients avan
 describe _* // Les variables générées _st _d _t _t0
 
 * Statistiques des patients
