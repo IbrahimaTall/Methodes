@@ -1,4 +1,4 @@
-* Base de données sur le don de semences en kilog
+* Base de données sur le don de semences en kilg
 use effectdata.dta, clear
 * Description des variables
 describe, varlist //Pour sauvegarder les variables
