@@ -1,4 +1,5 @@
 * Base de données sur le don de semences en kg
+je vous aiment beaucoup
 use effectdata.dta, clear
 * Description des variables
 describe, varlist //Pour sauvegarder les variables
