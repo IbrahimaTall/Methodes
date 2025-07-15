@@ -1,4 +1,4 @@
-* Base de données sur le don de semences en kg je suis beau pour v
+* Base de données sur le don de semences en kg je suis beau pour
 use effectdata.dta, clear
 * Description des variable
 describe, varlist //Pour sauvegarder les variables
