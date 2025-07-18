@@ -1,6 +1,6 @@
 * Base de données sur le don de semences en kg
 use effectdata.dta, clear
-* Description des variable/////////////////////////////////
+* Description des variable////////////////////////////////
 describe, varlist //Pour sauvegarder les variables
 * Structure des semences reçu par les ménages par année
 local cond inlist(REG,6,7,8,9,11,12,14) & CAMP > 2021
