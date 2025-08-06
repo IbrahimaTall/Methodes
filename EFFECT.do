@@ -1,5 +1,5 @@
 * Base de données sur le don de semences en k
-use effectdata.dta, clear//////////////////////////////////
+use effectdata.dta, clear/////////////////////////////////
 * Description des variable
 describe, varlist //Pour sauvegarder les variables
 * Structure des semences reçu par les ménages par année
