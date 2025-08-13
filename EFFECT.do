@@ -1,4 +1,4 @@
-1111111
+111111
 1111111
 * Base de données sur le don de semences en k
 use effectdata.dta, clear
