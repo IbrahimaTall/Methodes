@@ -6,7 +6,7 @@
   3. Analyse des composantes principales
   4. Analyse discriminantes
   5. Classification (cluster analysis)
-*/77777777777777777777777777
+*/7777777777777777777777777
 use effectdata.dta, clear
 *################### 1. Analyse des composantyes ######################################################################################
 *------------- i. Analyse simple des correspondances: Similarité et associationn entre deux variables catégoriuelles *
