@@ -1,4 +1,4 @@
-/////////////////////////////////////
+////////////////////////////////////
 * Base de données sur le don de semences en k
 use effectdata.dta, clear
 * Description des variable
