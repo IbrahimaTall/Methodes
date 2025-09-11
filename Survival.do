@@ -6,7 +6,7 @@ stset studytim , failure(died)
 
 *studytim: temps de traitement des
 describe _* // Les variables générées _st _d _t _t0
-777777777777777777777777
+77777777777777777777777
 * Statistiques des patients
 stsum, by(drug)
 
