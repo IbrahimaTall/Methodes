@@ -1,4 +1,4 @@
-* Base de données s
+* Base de données 
 use effectdata.dta, clear
 * Description des variable
 describe, varlist 
