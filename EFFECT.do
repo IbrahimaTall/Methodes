@@ -1,4 +1,4 @@
-* Base de données sur le don de s
+* Base de données sur le don de 
 use effectdata.dta, clear
 * Description des variable
 describe, varlist 
