@@ -1,4 +1,4 @@
-* Base de données sur le don de semences en k
+* Base de données sur le don de semences en 
 use effectdata.dta, clear
 * Description des variable
 describe, varlist 
