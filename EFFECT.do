@@ -2,7 +2,7 @@
 use effectdata.dta, clear
 * Description des variable
 describe, varlist 
-* Structure des semences reçu par les ménages par année1111111111121a22222a111aaaaa
+* Structure des semences reçu par les ménages par année1111111111121a22222a111aaaa
 local cond inlist(REG,6,7,8,9,11,12,14) & CAMP > 2021
 table (REG)(CAMP) if `cond', statistic(mean SEM) nformat(%9.0fc)
 *##############################################################################
