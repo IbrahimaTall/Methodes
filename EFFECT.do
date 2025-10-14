@@ -1,6 +1,6 @@
 * Base de donnée
 use effectdata.dta, clear
-* Description des variable
+* Description des variable///////////////////////////////////////
 describe, varlist 
 * Structure des semences reçu par les ménages par année
 local cond inlist(REG,6,7,8,9,11,12,14) & CAMP > 2021
