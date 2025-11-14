@@ -1,5 +1,5 @@
 * This is a model for survival analysis : fsum, univar, unitab
-webuse cancer, clear/////////////////////////////////
+webuse cancer, clear////////////////////////////////
 describe
 * Déclaration des données
 stset studytim , failure(died) 
