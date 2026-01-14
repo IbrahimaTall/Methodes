@@ -1,5 +1,5 @@
 * Base de donnée
-use effectdata.dta, clear///////////////////////////////////
+use effectdata.dta, clear//////////////////////////////////
 * Description des variable
 describe, varlist 
 * Structure des semences reçu par les ménages par année
